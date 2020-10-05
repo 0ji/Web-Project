@@ -63,4 +63,11 @@ body {
 .flex-card {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: ()
+}
+
+.flex-card {
+    color: white;
 }
