@@ -19,28 +19,56 @@
 <body>
     <!-- Navigation / Header -->
     <header>
-        <!-- Top navbar -->
+        <!-- Top header navbar -->
         <ul class="navigation">
             <!-- TODO: use flexbox to have left/middle/right parts, sticky? -->
-            <li class="logo"><a href="#"><img src="img/logo.png"></a></li>
-            <li><a class="active" href="./index.html">Home</a></li>
+            <li class="logo"><a href="./index.html"><img src="img/logo.png"></a></li>
+            <li class="nav-search"><button type="submit"><i class="fa fa-search"></i></button><input type="text"
+                    placeholder="Search.." name="search"></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
         </ul>
-        
+    </header>
+
+    <main>
         <!-- Category navbar -->
-        <ul class="categories">
+        <ul class="sticky categories">
             <!-- TODO: more product categories, dropdown menu https://www.w3schools.com/css/css_dropdowns.asp -->
             <li><a href="#">Spaceship Parts</a></li>
             <li><a href="#">Astronaut TM Clothing</a></li>
             <li><a href="#">Black-hole Seal</a></li>
             <li><a href="#">Time-space tear prevention guarantee</a></li>
         </ul>
-    </header>
+        <!-- Featured product card -->
+        <div class="flex-card">
+            <div>
+                <h2>Feature Banner(s)</h2>
+                <p>Feature Banner(s) description</p>
+            </div>
+            <div><img src="img/spaceship_neptune.jpg"></div>
+        </div>
 
-    <main>
-        
+        <!-- TODO: breadcumbs  ( Home > Category > Sub-Category ) or ( Home > Search for "search_here" )-->
+
+        <!-- search menu, with content -->
+
+        <div class="search-container">
+            <div class="sort-sidebar">
+
+            </div>
+            <div class="product-container">
+                <div class="filter-bar">
+
+                </div>
+                <div class="products">
+
+                </div>
+            </div>
+        </div>
+
+
     </main>
 </body>
 

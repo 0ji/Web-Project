@@ -19,27 +19,28 @@
 <body>
     <!-- Navigation / Header -->
     <header>
-        <!-- Top navbar -->
+         <!-- Top header navbar -->
         <ul class="navigation">
             <!-- TODO: use flexbox to have left/middle/right parts, sticky? -->
-            <li class="logo"><a href="#"><img src="img/logo.png"></a></li>
-            <li><a class="active" href="./index.html">Home</a></li>
+            <li class="logo"><a href="./index.html"><img src="img/logo.png"></a></li>
+            <li class="nav-search"><button type="submit"><i class="fa fa-search"></i></button><input type="text" placeholder="Search.." name="search"></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
         </ul>
         
+    </header>
+    
+    <main>
         <!-- Category navbar -->
-        <ul class="categories">
+        <ul class="sticky categories">
             <!-- TODO: more product categories, dropdown menu https://www.w3schools.com/css/css_dropdowns.asp -->
             <li><a href="#">Spaceship Parts</a></li>
             <li><a href="#">Astronaut TM Clothing</a></li>
             <li><a href="#">Black-hole Seal</a></li>
             <li><a href="#">Time-space tear prevention guarantee</a></li>
         </ul>
-    </header>
-
-    <main>
         <!-- Featured product cards -->
         <div class="flex-card">
             <div>
