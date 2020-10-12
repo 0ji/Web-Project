@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Koji Dino, Usaamah Gill">
+
+    <title>Space Website</title>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/ea25cca267.js" crossorigin="anonymous"></script>
+
+    <!-- Custom Stylesheet-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Navigation / Header -->
+    <header>
+        <!-- Top header navbar -->
+        <ul class="navigation">
+            <li class="logo">
+                <a href="./index.html"><img src="img/logo.png"></a>
+            </li>
+            <li class="nav-search"><button type="submit"><i class="fa fa-search"></i></button><input type="text" placeholder="Search.." name="search"></li>
+            <li><a href="./search.html">Search</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- Category navbar -->
+        <ul class="sticky categories">
+            <!-- TODO: more product categories, dropdown menu https://www.w3schools.com/css/css_dropdowns.asp -->
+            <li><a href="#">Spaceship Parts</a></li>
+            <li><a href="#">Astronaut&trade; Clothing</a></li>
+            <li><a href="#">Black-hole Seal</a></li>
+            <li><a href="#">Time-space tear prevention guarantee</a></li>
+        </ul>
+        <!-- Featured product card -->
+        <div class="flex-card">
+            <div>
+                <h2>Feature Banner(s)</h2>
+                <p>Feature Banner(s) description</p>
+            </div>
+            <div><img src="img/spaceship_neptune.jpg"></div>
+        </div>
+
+        <!-- search menu, with content -->
+        <div></div>
+        <div class="search-container">
+            <div class="sidenav">
+                <!-- TODO: breadcumbs  ( Home > Category > Sub-Category ) or ( Home > Search for "search_here" )-->
+                <p style="color: lightgray;">Home > Category > Sub-Category</p>
+                <button class="dropdown-btn">Spaceship Parts <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Subcat 1</a>
+                    <a href="#">Subcat 2</a>
+                    <a href="#">Subcat 3</a>
+                </div>
+                <button class="dropdown-btn">Astronaut&trade; Clothing<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Subcat 1</a>
+                    <a href="#">Subcat 2</a>
+                    <a href="#">Subcat 3</a>
+                </div>
+                <button class="dropdown-btn">Black-hole Seal <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Subcat 1</a>
+                    <a href="#">Subcat 2</a>
+                    <a href="#">Subcat 3</a>
+                </div>
+                <button class="dropdown-btn">Time-space tear prevention guarantee <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Subcat 1</a>
+                    <a href="#">Subcat 2</a>
+                    <a href="#">Subcat 3</a>
+                </div>
+                <a href="#">Product with no dropdown</a>
+
+            </div>
+            <div class="product-container">
+                <div class="filter-bar">
+                    <!-- TODO: search results? (jscript) -->
+                    <li class="product-search"><input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button></li>
+                    <div class="filters">
+                        <div class="filter-grp">
+                            <label for="filter">Filter</label>
+                            <select name="Filter" id="filter">
+                                <optgroup label="Price">
+                                    <option value="0-10">$0.00-$9.99</option>
+                                    <option value="10-25">$10.00-$24.99</option>
+                                    <option value="25-50">$24.99-$49.99</option>
+                                    <option value="50-100">$49.99-$99.99</option>
+                                    <option value="100+">$100.00+</option>
+                                </optgroup>
+                                <optgroup label="Rating">
+                                    <option value="5 Stars">&starf;&starf;&starf;&starf;&starf;</option>
+                                    <option value="4 Stars">&starf;&starf;&starf;&starf;&star;</option>
+                                    <option value="3 Stars">&starf;&starf;&starf;&star;&star;</option>
+                                    <option value="2 Stars">&starf;&starf;&star;&star;&star;</option>
+                                    <option value="1 Star">&starf;&star;&star;&star;&star;</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="filter-grp">
+                            <label for="sort">Sort</label>
+                            <select name="Sort" id="sort">
+                                <option value="lowtohigh">($) Low to High</option>
+                                <option value="hightolow">($) High to Low</option>
+                                <option value="lowtohigh">(&star;) Low to High</option>
+                                <option value="hightolow">(&starf;) High to Low</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product-card">
+                        <img src="img/product-placeholder.png" alt="Placeholder">
+                        <h1>Placeholder 1</h1>
+                        <p>$1234.56</p>
+                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                        <p>(x Reviews)</p>
+                        <p>Placeholder description, you will be warned.</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/product-placeholder.png" alt="Placeholder">
+                        <h1>Placeholder 2</h1>
+                        <p>$1234.56</p>
+                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                        <p>(x Reviews)</p>
+                        <p>Placeholder description, you will be warned.</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/product-placeholder.png" alt="Placeholder">
+                        <h1>Placeholder 3</h1>
+                        <p>$1234.56</p>
+                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                        <p>(x Reviews)</p>
+                        <p>Placeholder description, you will be warned.</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/product-placeholder.png" alt="Placeholder">
+                        <h1>Placeholder 4</h1>
+                        <p>$1234.56</p>
+                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                        <p>(x Reviews)</p>
+                        <p>Placeholder description, you will be warned.</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/product-placeholder.png" alt="Placeholder">
+                        <h1>Placeholder 5</h1>
+                        <p>$1234.56</p>
+                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                        <p>(x Reviews)</p>
+                        <p>Placeholder description, you will be warned.</p>
+                        <button>Add to cart</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="img/product-placeholder.png" alt="Placeholder">
+                        <h1>Placeholder</h1>
+                        <p>$1234.56</p>
+                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
+                        <p>(x Reviews)</p>
+                        <p>Placeholder description, you will be warned.</p>
+                        <button>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- JS dropdown ( taken from http://w3schools-fa.ir/howto/howto_js_dropdown_sidenav.html )
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+    -->
+</body>
+
+</html>
