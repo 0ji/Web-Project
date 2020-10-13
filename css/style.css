@@ -13,7 +13,7 @@ div.TopBanner {
     background-position: center;
     height: 15vh;
     background-size: 120vw;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/zRbKQOb.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/zRbKQOb.jpg");
 }
 
 div.BannerText {
@@ -72,6 +72,7 @@ nav {
     border: 5px, black;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.6);
+    margin: 15px 0;
 }
 
 .flextext {
@@ -94,11 +95,6 @@ nav {
     border-radius: 20px;
 }
 
-
-/* TODO: make image resize when width is larger/smaller 
-or make image float in background, with text over top
-*/
-
 .flex-card div {
     margin: 1rem auto;
 }
@@ -117,6 +113,7 @@ or make image float in background, with text over top
 .flex-card img {
     display: block;
     width: 100%;
+    border-radius: 5px;
 }
 
 
@@ -247,9 +244,6 @@ or make image float in background, with text over top
 
 
 /* products search results */
-
-
-/* TODO: make cards dynamically resize, fix shadows, round cards */
 
 .products {
     display: flex;
