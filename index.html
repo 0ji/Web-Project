@@ -19,29 +19,26 @@
 <body>
     <!-- Navigation / Header -->
     <header>
-        <!-- Top header navbar -->
-        <ul class="navigation">
-            <li class="logo">
-                <a href="./index.html"><img src="img/logo.png"></a>
-            </li>
-            <li class="nav-search"><button type="submit"><i class="fa fa-search"></i></button><input type="text" placeholder="Search.." name="search"></li>
-            <li><a href="./search.html">Search</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-
+        <!-- This creates the dynamic header image, text and logo area at the top of the page  -->
+        <div class="TopBanner">
+            <div class="BannerText">
+                <h1>Welcome to the world of BlackStar Alliance</h1>
+                <p>'Bringing the universe to you, and you to the universe'</p>
+            </div>
+        </div>
     </header>
 
     <main>
-        <!-- Category navbar -->
-        <ul class="sticky categories">
-            <!-- TODO: more product categories, dropdown menu https://www.w3schools.com/css/css_dropdowns.asp -->
-            <li><a href="#">Spaceship Parts</a></li>
-            <li><a href="#">Astronaut&trade; Clothing</a></li>
-            <li><a href="#">Black-hole Seal</a></li>
-            <li><a href="#">Time-space tear prevention guarantee</a></li>
-        </ul>
+        <nav>
+            <button class="logo" href="#">BlackStar Alliance</button>
+            <button class="item" href="#">Home</button>
+            <button class="item" href="#">About</button>
+            <button class="item" href="#">Blog</button>
+            <button class="item coolbuttons" href="#">Log In</button>
+            <button class="item coolbuttons" href="#">Sign Up</button>
+            <button class="item coolbuttons" href="#"><i class="fas fa-shopping-cart"></i></button>
+        </nav>
+
         <!-- Featured product cards -->
         <div class="flex-card">
             <div>
