@@ -106,7 +106,7 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -127,7 +127,7 @@ nav {
     background-color: rgba(150, 209, 255, 0.6);
     text-align: center;
     padding: 5px;
-    margin: 1rem .5rem;
+    margin: 1rem 1rem;
 }
 
 .card-catgry:hover {
