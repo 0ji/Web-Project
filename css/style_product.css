@@ -7,7 +7,7 @@ body {
     align-items: baseline;
     height: 100px;
     text-align: justify;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/background_star.png");
+    background-image: url("/img/background_star.png");
     margin: auto;
 }
 
@@ -38,10 +38,20 @@ nav {
     flex: 100px;
     flex-direction: row;
     background-color: #294568;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     line-height: 0;
+}
+
+nav div {
+    display: flex;
+    flex: 100px;
+    flex-direction: row;
+}
+
+nav div.right {
+    justify-content: flex-end;
 }
 
 .logo {
@@ -81,13 +91,15 @@ nav {
     display: flex;
     width: 100%;
     min-height: 75vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
 }
 
 .image-carousel {
     width: 250px;
-    background-color: #3C5676;
-    border: 5px, black;
-    border-radius: 25px;
+    background-color: #00295e31;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 .placeholder {
@@ -104,8 +116,7 @@ nav {
     flex-direction: column;
     width: 75%;
     border: 5px, black;
-    border-radius: 25px;
-    background-color: #143259;
+    background-color: #0824499c;
 }
 
 .product-image {
@@ -122,8 +133,9 @@ nav {
     float: right;
     width: 25%;
     border: 5px, black;
-    border-radius: 25px;
-    background-color: #3C5676;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #104e9e00;
 }
 
 .priceinfo {
@@ -216,7 +228,7 @@ nav {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    background-color: #29456888;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .flextext {
@@ -244,6 +256,7 @@ img.fleximg {
 .fleximg img {
     display: block;
     width: 100%;
+    border-radius: 20px;
 }
 
 .flex-card div {

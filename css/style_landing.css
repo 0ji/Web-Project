@@ -126,7 +126,7 @@ div.text {
 }
 
 .flex-card div {
-    margin: 10rem;
+    margin: 1rem;
 }
 
 .flex-card img {
@@ -134,7 +134,7 @@ div.text {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .flex-card a {
@@ -156,7 +156,7 @@ div.text {
     box-shadow: 0 0 25px rgba(208, 109, 255, 0.7);
 }
 
-.flex-card div {
+.flex-card .flex-gallery {
     margin: 1rem auto;
 }
 

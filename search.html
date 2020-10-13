@@ -29,17 +29,23 @@
     </header>
 
     <main>
+        <!-- Sticky Navbar -->
         <nav>
-            <button class="logo" href="#">BlackStar Alliance</button>
-            <button class="item" href="#">Home</button>
-            <button class="item" href="#">About</button>
-            <button class="item" href="#">Blog</button>
-            <button class="item coolbuttons" href="#">Log In</button>
-            <button class="item coolbuttons" href="#">Sign Up</button>
-            <button class="item coolbuttons" href="#"><i class="fas fa-search"></i></button>
-            <button class="item coolbuttons" href="#"><i class="fas fa-shopping-cart"></i></button>
+            <!-- Left Side -->
+            <div>
+                <button class="logo" href="#">BlackStar Alliance</button>
+                <button class="item" href="#">Home</button>
+                <button class="item" href="#">About</button>
+                <button class="item" href="#">Blog</button>
+            </div>
+            <!-- Right Side -->
+            <div class="right">
+                <button class="item coolbuttons" href="#">Log In</button>
+                <button class="item coolbuttons" href="#">Sign Up</button>
+                <button class="item coolbuttons" href="#"><i class="fas fa-search"></i></button>
+                <button class="item coolbuttons" href="#"><i class="fas fa-shopping-cart"></i></button>
+            </div>
         </nav>
-
 
         <!-- search menu, with content -->
         <div></div>
@@ -75,6 +81,7 @@
 
             </div>
             <div class="product-container">
+                <h2>Your search for [search field here] yielded [#] results</h2>
                 <div class="filter-bar">
                     <!-- TODO: search results? (jscript) -->
                     <li class="product-search"><input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button></li>
@@ -205,7 +212,6 @@
     -->
 </body>
 
-<!-- Footer -->
 <!-- Footer -->
 <footer class="footer">
 
