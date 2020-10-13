@@ -80,12 +80,17 @@
                 <a href="#">Product with no dropdown</a>
 
             </div>
+            <!-- container for all things product-search related. -->
             <div class="product-container">
+                <!-- TODO: add JQuery to dynamically show bracketed fields. -->
                 <h2>Your search for [search field here] yielded [#] results</h2>
                 <div class="filter-bar">
                     <!-- TODO: search results? (jscript) -->
+                    <!-- Search Box -->
                     <li class="product-search"><input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button></li>
+                    <!-- Filters (Sort by, filter) -->
                     <div class="filters">
+                        <!-- Filter By Dropdown -->
                         <div class="filter-grp">
                             <label for="filter">Filter</label>
                             <select name="Filter" id="filter">
@@ -105,6 +110,7 @@
                                 </optgroup>
                             </select>
                         </div>
+                        <!-- Sort By Dropdown -->
                         <div class="filter-grp">
                             <label for="sort">Sort</label>
                             <select name="Sort" id="sort">
@@ -116,6 +122,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- List of Products
+                TODO: JQuery dynamically showing products based on search query. -->
                 <div class="products">
                     <div class="product-card">
                         <img src="img/product-placeholder.png" alt="Placeholder">
@@ -174,6 +182,7 @@
                 </div>
             </div>
         </div>
+        <!-- Featured cards -->
         <div class="flex-card">
             <div class="flextext">
                 <h2>Brand new <br> Rocket Powered Battle Cars!</h2>
