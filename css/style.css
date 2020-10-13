@@ -67,20 +67,31 @@ nav {
 
 .flex-card {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    width: 100%;
+    justify-content: space-around;
+    border: 5px, black;
+    border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.6);
-    margin: 1rem auto;
-    max-width: 100%
 }
 
-.flex-card img {
+.flextext {
+    padding-top: 5vw;
+    color: rgb(240, 241, 245);
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    font-size: max(2vw, 12px);
+}
+
+.fleximg {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.fleximg img {
+    border-radius: 20px;
 }
 
 
@@ -101,6 +112,11 @@ or make image float in background, with text over top
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.flex-card img {
+    display: block;
+    width: 100%;
 }
 
 
