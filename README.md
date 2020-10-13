@@ -1,4 +1,4 @@
 # Web Project
  Web Project for CST8285
 
-Koji Dino, Usaamah Gill, Akshay Gokani
+Koji Dino & Usaamah Gill
