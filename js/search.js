@@ -16,6 +16,7 @@ for (i = 0; i < dropdown.length; i++) {
 }
 
 // javascript list of products
+// test
 var list = [{
         "title": "Example 1",
         "img": "img/product-placeholder.png",
