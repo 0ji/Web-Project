@@ -36,16 +36,13 @@ var list = [{
     }
 ];
 
-// Search function to store query in session storage.
-function searchQuery() {
-    var query = document.getElementById("search_field").value;
-    sessionStorage.setItem("query", query);
-    window.location.href = "/search.html";
-}
-
-//loads search result, if any.
+// loads search result, if any.
+// learned from https://www.sitepoint.com/get-url-parameters-with-javascript/
+// TODO: add options to sort/filter at end.
 window.addEventListener('load', (event) => {
-    var query = sessionStorage.getItem("query");
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    query = urlParams.get('query');
     var container = document.getElementById("products"); // product container
     if ((query != "") && (query != null)) {
         container.innerHTML = ''; // clear products
@@ -56,42 +53,7 @@ window.addEventListener('load', (event) => {
             var title = product.title.toUpperCase();
             if (title.includes(query.toUpperCase())) {
                 alert("MATCH: \n" + title + "/" + query.toUpperCase());
-
-                var productCard = document.createElement("LI");
-                productCard.className = "product-card";
-                productCard.setAttribute("category", product.category);
-
-
-                var img = document.createElement("IMG");
-                img.src = product.img;
-
-                var name = document.createElement("H1");
-                name.innerHTML = product.title;
-
-                var price = document.createElement("P");
-                price.innerHTML = product.price;
-
-                var rating = document.createElement("P");
-                rating.innerHTML = product.rating;
-
-                var reviews = document.createElement("P");
-                reviews.innerHTML = product.reviews;
-
-                var desc = document.createElement("P");
-                desc.innerHTML = product.desc;
-
-                var button = document.createElement("BUTTON");
-                button.innerHTML = "Add to cart";
-
-                productCard.appendChild(img);
-                productCard.appendChild(name);
-                productCard.appendChild(price);
-                productCard.appendChild(rating);
-                productCard.appendChild(reviews);
-                productCard.appendChild(desc);
-                productCard.appendChild(button);
-
-                container.appendChild(productCard);
+                createProductCard(container, product);
             }
         }
         alert("for done");
@@ -101,6 +63,44 @@ window.addEventListener('load', (event) => {
     }
 });
 
+// creates product card and inserts it into page
+function createProductCard(container, product) {
+    var productCard = document.createElement("LI");
+    productCard.className = "product-card";
+    productCard.setAttribute("category", product.category);
+
+
+    var img = document.createElement("IMG");
+    img.src = product.img;
+
+    var name = document.createElement("H1");
+    name.innerHTML = product.title;
+
+    var price = document.createElement("P");
+    price.innerHTML = product.price;
+
+    var rating = document.createElement("P");
+    rating.innerHTML = product.rating;
+
+    var reviews = document.createElement("P");
+    reviews.innerHTML = product.reviews;
+
+    var desc = document.createElement("P");
+    desc.innerHTML = product.desc;
+
+    var button = document.createElement("BUTTON");
+    button.innerHTML = "Add to cart";
+
+    productCard.appendChild(img);
+    productCard.appendChild(name);
+    productCard.appendChild(price);
+    productCard.appendChild(rating);
+    productCard.appendChild(reviews);
+    productCard.appendChild(desc);
+    productCard.appendChild(button);
+
+    container.appendChild(productCard);
+}
 /*function searchQuery() {
     var query = document.getElementById("search_field").value.toUppercase();
     alert("test" + query);
