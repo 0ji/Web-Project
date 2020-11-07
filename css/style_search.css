@@ -6,7 +6,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
     background-image: url("/img/background_star.png");
     margin: auto;
-    /* max-width: 1440px; */
+    max-width: 1920px;
 }
 
 
@@ -131,7 +131,7 @@ nav div.right {
 /* sidebar */
 
 .sidenav {
-    flex-basis: 20%;
+    flex-basis: 30%;
     height: 100%;
     margin: 1rem;
     overflow-x: hidden;
@@ -202,7 +202,7 @@ nav div.right {
 
 .product-search {
     display: inline-block;
-    margin: 10px 0px;
+    margin: auto;
 }
 
 #filter,
@@ -213,17 +213,20 @@ nav div.right {
 .product-search input[type=text],
 .product-search button {
     float: left;
-    padding: 5px;
+    padding: 10px;
     border: none;
 }
 
 .product-search input[type=text] {
-    margin-left: 24px;
-    width: 12rem;
+    width: 24rem;
     color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .product-search button {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     cursor: pointer;
     background-color: grey;
 }
@@ -231,14 +234,16 @@ nav div.right {
 
 /* products search results */
 
-.products {
+#products {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     background: rgba(0, 0, 0, 0.4);
-    width: 100%;
+    width: auto;
     height: auto;
     margin: 0.67rem 0;
     border-radius: 1rem;
+    list-style-type: none;
 }
 
 .product-card {

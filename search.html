@@ -34,15 +34,22 @@
             <!-- Left Side -->
             <div>
                 <button class="logo" href="#">BlackStar Alliance</button>
-                <button class="item" href="#">Home</button>
                 <button class="item" href="#">About</button>
                 <button class="item" href="#">Blog</button>
+            </div>
+            <!-- Search Box -->
+            <div>
+                <li class="product-search">
+                    <input type="text" placeholder="Search.." name="query" id="search_field">
+                    <button type="submit" onclick="searchQuery()">
+                    <i class="fa fa-search"></i>
+                </button>
+                </li>
             </div>
             <!-- Right Side -->
             <div class="right">
                 <button class="item coolbuttons" href="#">Log In</button>
                 <button class="item coolbuttons" href="#">Sign Up</button>
-                <button class="item coolbuttons" href="#"><i class="fas fa-search"></i></button>
                 <button class="item coolbuttons" href="#"><i class="fas fa-shopping-cart"></i></button>
             </div>
         </nav>
@@ -86,8 +93,7 @@
                 <h2>Your search for [search field here] yielded [#] results</h2>
                 <div class="filter-bar">
                     <!-- TODO: search results? (jscript) -->
-                    <!-- Search Box -->
-                    <li class="product-search"><input type="text" placeholder="Search.." name="search"><button type="submit"><i class="fa fa-search"></i></button></li>
+
                     <!-- Filters (Sort by, filter) -->
                     <div class="filters">
                         <!-- Filter By Dropdown -->
@@ -124,8 +130,8 @@
                 </div>
                 <!-- List of Products
                 TODO: JQuery dynamically showing products based on search query. -->
-                <div class="products">
-                    <div class="product-card">
+                <ul id="products">
+                    <li class="product-card">
                         <img src="img/product-placeholder.png" alt="Placeholder">
                         <h1>Placeholder 1</h1>
                         <p>$1234.56</p>
@@ -133,8 +139,8 @@
                         <p>(x Reviews)</p>
                         <p>Placeholder description, you will be warned.</p>
                         <button>Add to cart</button>
-                    </div>
-                    <div class="product-card">
+                    </li>
+                    <li class="product-card">
                         <img src="img/product-placeholder.png" alt="Placeholder">
                         <h1>Placeholder 2</h1>
                         <p>$1234.56</p>
@@ -142,44 +148,8 @@
                         <p>(x Reviews)</p>
                         <p>Placeholder description, you will be warned.</p>
                         <button>Add to cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="img/product-placeholder.png" alt="Placeholder">
-                        <h1>Placeholder 3</h1>
-                        <p>$1234.56</p>
-                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
-                        <p>Placeholder description, you will be warned.</p>
-                        <button>Add to cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="img/product-placeholder.png" alt="Placeholder">
-                        <h1>Placeholder 4</h1>
-                        <p>$1234.56</p>
-                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
-                        <p>Placeholder description, you will be warned.</p>
-                        <button>Add to cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="img/product-placeholder.png" alt="Placeholder">
-                        <h1>Placeholder 5</h1>
-                        <p>$1234.56</p>
-                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
-                        <p>Placeholder description, you will be warned.</p>
-                        <button>Add to cart</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="img/product-placeholder.png" alt="Placeholder">
-                        <h1>Placeholder</h1>
-                        <p>$1234.56</p>
-                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
-                        <p>Placeholder description, you will be warned.</p>
-                        <button>Add to cart</button>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- Featured cards -->
@@ -201,24 +171,7 @@
 
     </main>
 
-    <!-- JS dropdown ( taken from http://w3schools-fa.ir/howto/howto_js_dropdown_sidenav.html )
-    <script>
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
-    -->
+    <script src="js/search.js"></script>
 </body>
 
 <!-- Footer -->
