@@ -43,21 +43,19 @@ window.addEventListener('load', (event) => {
     var urlParams = new URLSearchParams(queryString);
     query = urlParams.get('query');
     var container = document.getElementById("products"); // product container
+    var resultcounter = 0; // counter to keep track of number of matching products
     if ((query != "") && (query != null)) {
         container.innerHTML = ''; // clear products
-        alert("You searched for " + query);
         // loops through js product array   -- can also use list.forEach(function(product){}), product=i
         for (i = 0; i < products.length; i++) {
             var product = products[i];
             var title = product.title.toUpperCase();
             if (title.includes(query.toUpperCase())) {
-                alert("MATCH: \n" + title + "/" + query.toUpperCase());
                 createProductCard(container, product);
+                resultcounter++;
             }
         }
-        alert("for done");
     } else {
-        alert('no query found');
         container.innerHTML = '';
         for (i = 0; i < products.length; i++) {
             var product = products[i];
@@ -66,9 +64,13 @@ window.addEventListener('load', (event) => {
         }
         // keep default products on page (hard-coded)
     }
+    // update query field to match, and update search results header string.
+    document.getElementById("search_field").value = query;
+    document.getElementById("search_header").innerHTML = '"' + query + '" has yielded ' + resultcounter + ' results.';
 
-    // add onclick which redirects to productpage with GET product ID (e.g. productpage?id=5)
 });
+
+// add onclick which redirects to productpage with GET product ID (e.g. productpage?id=5)
 
 // creates product card and inserts it into page
 function createProductCard(container, product) {

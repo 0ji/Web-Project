@@ -137,6 +137,15 @@ nav div.right {
     overflow-x: hidden;
 }
 
+.sidenav h2 {
+    color: pink;
+}
+
+.sidenav a,
+.sidenav button {
+    cursor: pointer;
+}
+
 .sidenav a,
 .sidenav button,
 .sidenav .filtersort {
@@ -146,7 +155,6 @@ nav div.right {
     background: rgba(255, 255, 255, 0.05);
     width: 100%;
     text-align: left;
-    cursor: pointer;
     outline: none;
     color: rgb(194, 194, 194);
     font-weight: bold;
