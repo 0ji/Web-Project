@@ -88,12 +88,12 @@
                 <h4>Filters & Sort</h4>
                 <form action="/search.html" class="filtersort">
                     <div>
-                        <label>Price: </label> <input type="number" name="lowPrice" min="0"> to <input type="number" name="highPrice"><br><br>
-                        <label>Rating: </label> <input type="number" name="lowStar" min="0" max="5"> to <input type="number" name="highStar">&starf;<br><br>
+                        <label>Price: </label> $<input type="text" name="lowPrice" min="0" placeholder="min"> to $<input type="text" name="highPrice" min="0" placeholder="max"><br><br>
+                        <label>Rating: </label> <input type="number" name="lowStar" min="0" max="5">&starf; to <input type="number" name="highStar" min="0" max="5">&starf;<br><br>
                     </div>
                     <div>
                         <label>Sort:</label>
-                        <select name="Sort" id="sort">
+                        <select name="Sort" class="sort">
                                 <option value="lowtohigh">($) Low to High</option>
                                 <option value="hightolow">($) High to Low</option>
                                 <option value="lowtohigh">(&star;) Low to High</option>
@@ -105,8 +105,8 @@
             </div>
             <!-- container for all things product-search related. -->
             <div class="product-container">
-                <!-- TODO: add JQuery/Jscript to dynamically show bracketed fields. -->
-                <h2>Your search for [search field here] yielded [#] results</h2>
+                <!-- Your search for [search field here] yielded [#] results -->
+                <h2 id=''>Search Results Page</h2>
                 <div class="filter-bar">
                     <!-- TODO: search results? (jscript) -->
 
@@ -121,21 +121,21 @@
                                     <option value="10-25">$10.00-$24.99</option>
                                     <option value="25-50">$24.99-$49.99</option>
                                     <option value="50-100">$49.99-$99.99</option>
-                                    <option value="100+">$100.00+</option>
+                                    <option value="100">$100.00+</option>
                                 </optgroup>
                                 <optgroup label="Rating">
-                                    <option value="5 Stars">&starf;&starf;&starf;&starf;&starf;</option>
-                                    <option value="4 Stars">&starf;&starf;&starf;&starf;&star;</option>
-                                    <option value="3 Stars">&starf;&starf;&starf;&star;&star;</option>
-                                    <option value="2 Stars">&starf;&starf;&star;&star;&star;</option>
-                                    <option value="1 Star">&starf;&star;&star;&star;&star;</option>
+                                    <option value="5">&starf;&starf;&starf;&starf;&starf;</option>
+                                    <option value="4">&starf;&starf;&starf;&starf;&star;</option>
+                                    <option value="3">&starf;&starf;&starf;&star;&star;</option>
+                                    <option value="2">&starf;&starf;&star;&star;&star;</option>
+                                    <option value="1">&starf;&star;&star;&star;&star;</option>
                                 </optgroup>
                             </select>
                         </div>
                         <!-- Sort By Dropdown -->
                         <div class="filter-grp">
                             <label for="sort">Sort</label>
-                            <select name="Sort" id="sort">
+                            <select name="Sort" class="sort">
                                 <option value="lowtohigh">($) Low to High</option>
                                 <option value="hightolow">($) High to Low</option>
                                 <option value="lowtohigh">(&star;) Low to High</option>
@@ -152,7 +152,6 @@
                         <h1>Placeholder 1</h1>
                         <p>$1234.56</p>
                         <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum odio nec accumsan tristique. Nulla tristique ultrices mauris, eu volutpat nulla luctus a. Cras sit amet consequat lorem, nec porttitor eros. Vestibulum ante
                             ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
                         <button>Add to cart</button>
@@ -162,7 +161,6 @@
                         <h1>Placeholder 2</h1>
                         <p>$1234.56</p>
                         <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         <button>Add to cart</button>
                     </li>
@@ -189,6 +187,7 @@
     </main>
 
     <script src="js/search.js"></script>
+    <script src="js/products.js"></script>
 </body>
 
 <!-- Footer -->

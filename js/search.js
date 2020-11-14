@@ -1,5 +1,4 @@
 //JS dropdown ( taken from http://w3schools-fa.ir/howto/howto_js_dropdown_sidenav.html )>
-
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 
@@ -15,26 +14,26 @@ for (i = 0; i < dropdown.length; i++) {
     });
 }
 
-// javascript list of products
-var list = [{
-        "title": "Example 1",
-        "img": "img/product-placeholder.png",
-        "price": "$123.45",
-        "rating": "5 stars",
-        "reviews": "4 reviews",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-        "category": "donuts-category"
-    },
-    {
-        "title": "Example 2",
-        "img": "img/product-placeholder.png",
-        "price": "223.45",
-        "rating": "4",
-        "reviews": "3",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-        "category": "example 2"
-    }
-];
+// // javascript list of products
+// var list = [{
+//         "title": "Example 1",
+//         "img": "img/product-placeholder.png",
+//         "price": "$123.45",
+//         "rating": "5 stars",
+//         "reviews": "4 reviews",
+//         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+//         "category": "donuts-category"
+//     },
+//     {
+//         "title": "Example 2",
+//         "img": "img/product-placeholder.png",
+//         "price": "223.45",
+//         "rating": "4",
+//         "reviews": "3",
+//         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+//         "category": "example 2"
+//     }
+// ];
 
 // loads search result, if any.
 // learned from https://www.sitepoint.com/get-url-parameters-with-javascript/
@@ -48,8 +47,8 @@ window.addEventListener('load', (event) => {
         container.innerHTML = ''; // clear products
         alert("You searched for " + query);
         // loops through js product array   -- can also use list.forEach(function(product){}), product=i
-        for (i = 0; i < list.length; i++) {
-            var product = list[i];
+        for (i = 0; i < products.length; i++) {
+            var product = products[i];
             var title = product.title.toUpperCase();
             if (title.includes(query.toUpperCase())) {
                 alert("MATCH: \n" + title + "/" + query.toUpperCase());
@@ -59,6 +58,12 @@ window.addEventListener('load', (event) => {
         alert("for done");
     } else {
         alert('no query found');
+        container.innerHTML = '';
+        for (i = 0; i < products.length; i++) {
+            var product = products[i];
+            var title = product.title.toUpperCase();
+            createProductCard(container, product);
+        }
         // keep default products on page (hard-coded)
     }
 
@@ -67,53 +72,36 @@ window.addEventListener('load', (event) => {
 
 // creates product card and inserts it into page
 function createProductCard(container, product) {
+    // creates DOM product card
     var productCard = document.createElement("LI");
     productCard.className = "product-card";
-    productCard.setAttribute("category", product.category);
+    productCard.setAttribute("id", product.id);
+    // productCard.setAttribute("category", product.category); // planned feature, to implement sorting by category
 
-
+    // creates HTML DOM elements for product card
     var img = document.createElement("IMG");
-    img.src = product.img;
-
     var name = document.createElement("H1");
-    name.innerHTML = product.title;
-
     var price = document.createElement("P");
-    price.innerHTML = product.price;
-
     var rating = document.createElement("P");
-    rating.innerHTML = product.rating;
-
-    var reviews = document.createElement("P");
-    reviews.innerHTML = product.reviews;
-
     var desc = document.createElement("P");
-    desc.innerHTML = product.desc;
-
     var button = document.createElement("BUTTON");
+
+    // updates DOM elements with product elements
+    img.src = product.imgsrc;
+    name.innerHTML = product.title;
+    price.innerHTML = '$' + product.price;
+    rating.innerHTML = product.rate + ' stars';
+    desc.innerHTML = 'desc: ' + product.description;
     button.innerHTML = "Add to cart";
 
+    // appends DOM elements to product card
     productCard.appendChild(img);
     productCard.appendChild(name);
     productCard.appendChild(price);
     productCard.appendChild(rating);
-    productCard.appendChild(reviews);
     productCard.appendChild(desc);
     productCard.appendChild(button);
 
+    // appends product card to product container
     container.appendChild(productCard);
 }
-/*function searchQuery() {
-    var query = document.getElementById("search_field").value.toUppercase();
-    alert("test" + query);
-
-    //input, searchvar, i, products, container, item;
-
-    input = document.getElementById("search_field").value.toUppercase();
-    container = document.getElementById("products");
-    products = cars.filter(list => list.title == input);
-    for (i = 0; i < products.length(); i++) {
-        item = document.createElement("li");
-        item.setAttribute('class', 'product-card');
-    }
-}*/
