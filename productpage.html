@@ -38,6 +38,16 @@
                 <button class="item" href="#">About</button>
                 <button class="item" href="#">Blog</button>
             </div>
+            <!-- Search Box -->
+            <div>
+                <li class="product-search">
+                    <form action="/search.html" method="get" id="form1"><input type="text" placeholder="Search.." name="query" id="search_field">
+                        <button type="submit">
+                    <i class="fa fa-search"></i>
+                    </form>
+                </button>
+                </li>
+            </div>
             <!-- Right Side -->
             <div class="right">
                 <button class="item coolbuttons" href="#">Log In</button>
@@ -68,7 +78,7 @@
             <!--Main product image view pane-->
             <div class="product-image-container">
                 <!--coontainer with the actual image file to allow resizing independently of flexbox-->
-                <img class="product-image" src="/img/element1.png" alt="Dual Guns 1">
+                <img class="product-image" src="/img/element1.png" alt="Formula 1 Mech">
                 <!--Flexbox for description UNDER flexbox with main image, organized in a column-->
                 <div class="product-description">
                     <label for="description">Description: </label>
@@ -84,8 +94,12 @@
                 </div>
                 <!--Number input to select quantity-->
                 <div class="quanityselector">
-                    <label for="quantityinput">Quantity:</label><br>
-                    <input type="range" name="quantityinput" value="0" min="0" max="99">
+                  <div>
+                      <label for="quantityinput">Quantity:</label>
+                  </div>
+                  <div>
+                      <input type="number" name="quantityinput" min="1" max="999">
+                  </div>
                 </div>
                 <!--add to cart button-->
                 <div class="add-to-cart">
