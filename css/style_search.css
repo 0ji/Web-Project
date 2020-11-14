@@ -135,11 +135,11 @@ nav div.right {
     height: 100%;
     margin: 1rem;
     overflow-x: hidden;
-    border-radius: 1rem;
 }
 
 .sidenav a,
-.sidenav button {
+.sidenav button,
+.sidenav .filtersort {
     text-decoration: none;
     display: block;
     border: none;
@@ -151,6 +151,16 @@ nav div.right {
     color: rgb(194, 194, 194);
     font-weight: bold;
     padding: 8px;
+}
+
+.filtersort {
+    margin-top: 1rem;
+    color: black;
+}
+
+.filtersort input {
+    width: 3rem;
+    color: black;
 }
 
 .sidenav a:hover,
