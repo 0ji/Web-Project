@@ -47,7 +47,7 @@ window.addEventListener('load', (event) => {
     if ((query != "") && (query != null)) {
         container.innerHTML = ''; // clear products
         alert("You searched for " + query);
-        // loops through js product array
+        // loops through js product array   -- can also use list.forEach(function(product){}), product=i
         for (i = 0; i < list.length; i++) {
             var product = list[i];
             var title = product.title.toUpperCase();
@@ -61,6 +61,8 @@ window.addEventListener('load', (event) => {
         alert('no query found');
         // keep default products on page (hard-coded)
     }
+
+    // add onclick which redirects to productpage with GET product ID (e.g. productpage?id=5)
 });
 
 // creates product card and inserts it into page
