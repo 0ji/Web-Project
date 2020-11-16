@@ -30,12 +30,11 @@ function loadPage() {
     var sortOrder = urlParams.get('sort') || 'starH2L';
     var container = document.getElementById("products"); // product container
     var resultcounter = 0; // counter to keep track of number of matching products
-
     // sorts/filters array
     var productlist = products;
     productlist = filterPrice(lowPrice, highPrice, productlist);
     productlist = filterRating(lowStar, highStar, productlist);
-    productlist = sort(sortOrder, productlist);
+    //productlist = sort(sortOrder, productlist);
 
 
     container.innerHTML = ''; // clear products
