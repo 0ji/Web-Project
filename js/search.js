@@ -91,11 +91,11 @@ function sort(order, arr) {
         return arr.sort(function(a, b) {
             return b.price - a.price;
         });
-    } else if (order == 'ratingL2H') {
+    } else if (order == 'starL2H') {
         return arr.sort(function(a, b) {
             return a.rate - b.rate;
         });
-    } else if (order == 'ratingH2L') {
+    } else if (order == 'starH2L') {
         return arr.sort(function(a, b) {
             return b.rate - a.rate;
         });
@@ -109,9 +109,9 @@ function createProductCard(container, product) {
     var productCard = document.createElement("LI");
     productCard.className = "product-card";
     productCard.setAttribute("id", product.id);
-    // productCard.setAttribute("category", product.category); // planned feature, to implement sorting by category
 
     // creates HTML DOM elements for product card
+    var aID = document.createElement("A");
     var img = document.createElement("IMG");
     var name = document.createElement("H1");
     var price = document.createElement("P");
