@@ -35,25 +35,24 @@
             <!-- Left Side -->
             <div>
                 <button class="logo" href="#">BlackStar Alliance</button>
-                <button class="item" href="#">Home</button>
                 <button class="item" href="#">About</button>
                 <button class="item" href="#">Blog</button>
             </div>
-            <!-- Search Box -->
             <div>
-                <li class="product-search">
-                    <form action="/search.html" method="get" id="form1"><input type="text" placeholder="Search.." name="query" id="search_field">
-                        <button type="submit">
-                    <i class="fa fa-search"></i>
-                    </form>
-                </button>
-                </li>
             </div>
             <!-- Right Side -->
             <div class="right">
+              <div>
+                  <li class="product-search">
+                      <form action="/search.html" method="get" id="form1"><input type="text" placeholder="Search.." name="query" id="search_field">
+                          <button type="submit">
+                      <i class="fa fa-search"></i>
+                      </form>
+                  </button>
+                  </li>
+              </div>
                 <button class="item coolbuttons" href="#">Log In</button>
                 <button class="item coolbuttons" href="#">Sign Up</button>
-                <button class="item coolbuttons" href="#"><i class="fas fa-search"></i></button>
                 <button class="item coolbuttons" href="#"><i class="fas fa-shopping-cart"></i></button>
             </div>
         </nav>
@@ -97,7 +96,7 @@
                 <div class="quanityselector">
                     <label for="quantityinput">Quantity:</label><br>
                     <!-- ON change -->
-                    <input type="number" name="quantityin" value="0" min="0" max="99" color=red onchange="updatePrice()">
+                    <input type="number" id="quaninput" name="quantityin" value="0" min="0" max="99" color=red onchange="updatePrice()">
                 </div>
                 <!--add to cart button-->
                 <div class="add-to-cart">
