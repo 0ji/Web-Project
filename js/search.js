@@ -114,7 +114,7 @@ function createProductCard(container, product) {
     var aID = document.createElement("A");
     var img = document.createElement("IMG");
     var name = document.createElement("H1");
-    var price = document.createElement("P");
+    var price = document.createElement("H2");
     var rating = document.createElement("P");
     var desc = document.createElement("P");
     var button = document.createElement("BUTTON");
@@ -125,7 +125,7 @@ function createProductCard(container, product) {
     name.innerHTML = product.title;
     price.innerHTML = '$' + product.price;
     rating.innerHTML = product.rate + ' stars';
-    desc.innerHTML = 'desc: ' + product.description;
+    desc.innerHTML = product.description;
     button.innerHTML = "Add to cart";
 
     // appends DOM elements to product card
