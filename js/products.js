@@ -4,7 +4,7 @@ var products = [{
         title: "Introductory Intergalactic Mech",
         price: 599,
         description: "Mech for war",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/element1.png",
         rate: "5"
     },
     {

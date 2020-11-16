@@ -141,6 +141,9 @@ nav div.right {
     color: pink;
 }
 
+
+/***** sidebar dropdown & sort */
+
 .sidenav a,
 .sidenav button {
     cursor: pointer;
@@ -194,31 +197,6 @@ nav div.right {
 .product-container {
     width: 100%;
     margin: 1rem;
-}
-
-.filter-bar {
-    background: rgba(255, 255, 255, 0.05);
-    display: block;
-    width: 100%;
-    height: 3rem;
-    border-radius: 1rem;
-}
-
-.filters {
-    float: right;
-    margin-right: 0.5rem;
-}
-
-.filter-grp {
-    display: inline-block;
-    text-align: center;
-    height: 100%;
-    margin: 14px 1rem;
-}
-
-.filter-grp label,
-.filter-grp select {
-    color: rgb(194, 194, 194);
 }
 
 .product-search {

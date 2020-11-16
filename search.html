@@ -93,14 +93,16 @@
                     </div>
                     <div>
                         <label>Sort:</label>
-                        <select name="Sort" class="sort">
+                        <select name="sort" class="sort">
                             <option selected diabled hidden></option>
-                            <option value="lowtohigh">($) Low to High</option>
-                            <option value="hightolow">($) High to Low</option>
-                            <option value="lowtohigh">(&star;) Low to High</option>
-                            <option value="hightolow">(&starf;) High to Low</option>
+                            <option value="priceL2H">($) Low to High</option>
+                            <option value="priceH2L">($) High to Low</option>
+                            <option value="starL2H">(&star;) Low to High</option>
+                            <option value="starH2L">(&starf;) High to Low</option>
                         </select>
                     </div>
+                    <!-- hidden search input to pass on previous query -->
+                    <input type="hidden" id="hiddenSearch" name="query">
                     <br>
                     <button style="text-align: center; width: 4rem;">apply</button>
                 </form>
@@ -108,44 +110,6 @@
             <!-- container for all things product-search related. -->
             <div class="product-container">
                 <h2 id='search_header'>Search Results Page</h2>
-                <div class="filter-bar">
-
-                    <!-- Filters (Sort by, filter) -->
-                    <div class="filters">
-                        <!-- Filter By Dropdown -->
-                        <div class="filter-grp">
-                            <label for="filter">Filter</label>
-                            <select name="Filter" id="filter">
-                                <option selected diabled hidden></option>
-                                <optgroup label="Price">
-                                    <option value="0-10">$0.00-$9.99</option>
-                                    <option value="10-25">$10.00-$24.99</option>
-                                    <option value="25-50">$24.99-$49.99</option>
-                                    <option value="50-100">$49.99-$99.99</option>
-                                    <option value="100">$100.00+</option>
-                                </optgroup>
-                                <optgroup label="Rating">
-                                    <option value="5">&starf;&starf;&starf;&starf;&starf;</option>
-                                    <option value="4">&starf;&starf;&starf;&starf;&star;</option>
-                                    <option value="3">&starf;&starf;&starf;&star;&star;</option>
-                                    <option value="2">&starf;&starf;&star;&star;&star;</option>
-                                    <option value="1">&starf;&star;&star;&star;&star;</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <!-- Sort By Dropdown -->
-                        <div class="filter-grp">
-                            <label for="sort">Sort</label>
-                            <select name="Sort" id="sort">
-                                <option selected diabled hidden></option>
-                                <option value="lowtohigh">($) Low to High</option>
-                                <option value="hightolow">($) High to Low</option>
-                                <option value="lowtohigh">(&star;) Low to High</option>
-                                <option value="hightolow">(&starf;) High to Low</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
                 <!-- List of Products
                 TODO: JQuery dynamically showing products based on search query. -->
                 <ul id="products">

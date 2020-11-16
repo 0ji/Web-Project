@@ -39,9 +39,13 @@ for (i = 0; i < dropdown.length; i++) {
 // learned from https://www.sitepoint.com/get-url-parameters-with-javascript/
 // TODO: add options to sort/filter at end.
 window.addEventListener('load', (event) => {
+    // get parameters from URL
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
     query = urlParams.get('query');
+    lowPrice = urlParams.get('lowPrice');
+    highPrice = urlParams.get('lowPrice');
+
     var container = document.getElementById("products"); // product container
     var resultcounter = 0; // counter to keep track of number of matching products
     if ((query != "") && (query != null)) {
@@ -64,8 +68,12 @@ window.addEventListener('load', (event) => {
         }
         // keep default products on page (hard-coded)
     }
+
+
+
     // update query field to match, and update search results header string.
     document.getElementById("search_field").value = query;
+    document.getElementById("hiddenSearch").value = query;
     document.getElementById("search_header").innerHTML = '"' + query + '" has yielded ' + resultcounter + ' results.';
     // update filter/sorts to match
 
