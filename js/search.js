@@ -114,7 +114,7 @@ function createProductCard(container, product) {
     // creates HTML DOM elements for product card
     var img = document.createElement("IMG");
     var name = document.createElement("H1");
-    var price = document.createElement("P");
+    var price = document.createElement("H2");
     var rating = document.createElement("P");
     var desc = document.createElement("P");
     var button = document.createElement("BUTTON");
