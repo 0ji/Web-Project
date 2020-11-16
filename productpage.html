@@ -95,12 +95,9 @@
                 </div>
                 <!--Number input to select quantity-->
                 <div class="quanityselector">
-                  <div>
-                      <label for="quantityinput">Quantity:</label>
-                  </div>
-                  <div>
-                      <input type="number" name="quantityinput" min="1" max="999">
-                  </div>
+                    <label for="quantityinput">Quantity:</label><br>
+                    <!-- ON change -->
+                    <input type="number" name="quantityin" value="0" min="0" max="99" color=red onchange="updatePrice()">
                 </div>
                 <!--add to cart button-->
                 <div class="add-to-cart">
