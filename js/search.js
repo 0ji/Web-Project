@@ -120,6 +120,7 @@ function createProductCard(container, product) {
     var button = document.createElement("BUTTON");
 
     // updates DOM elements with product elements
+    aID.href = "./productpage.html?id=" + product.id;
     img.src = product.imgsrc;
     name.innerHTML = product.title;
     price.innerHTML = '$' + product.price;
@@ -128,8 +129,9 @@ function createProductCard(container, product) {
     button.innerHTML = "Add to cart";
 
     // appends DOM elements to product card
-    productCard.appendChild(img);
-    productCard.appendChild(name);
+    aID.appendChild(img);
+    aID.appendChild(name);
+    productCard.appendChild(aID);
     productCard.appendChild(price);
     productCard.appendChild(rating);
     productCard.appendChild(desc);
