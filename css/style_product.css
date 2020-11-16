@@ -144,6 +144,7 @@ nav div.right {
 }
 
 .product-image-container {
+  margin-top: 25px;
   flex-direction: column;
   width: 75%;
   border: 5px, black;
@@ -151,8 +152,7 @@ nav div.right {
 }
 
 .product-image {
-  max-width: 50%;
-  padding-left: 25%;
+  justify-content: center;
 }
 
 .product-description {
