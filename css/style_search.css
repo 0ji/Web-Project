@@ -32,50 +32,79 @@ div.BannerText {
 /* Sticky Navigation */
 
 nav {
-    display: flex;
-    flex: 100px;
-    flex-direction: row;
-    background-color: #294568;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    line-height: 0;
+  display: flex;
+  flex: 100px;
+  flex-direction: row;
+  background-color: #294568;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  line-height: 0;
 }
 
 nav div {
-    display: flex;
-    flex: 100px;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 nav div.right {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .logo {
-    width: 150px;
-    align-self: flex-start;
+  width: 150px;
+  align-self: flex-start;
 }
 
 .item {
-    width: 80px;
-    justify-content: flex-start;
-    overflow: hidden;
+  width: 80px;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .logo,
 .item {
-    background-color: #028090;
-    margin: 10px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 15px;
+  background-color: #028090;
+  margin: 10px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 15px;
 }
 
 .coolbuttons {
-    background-color: #85798C;
+  background-color: #85798C;
+}
+.product-search {
+  flex-shrink: 0;
+  display: inline-block;
+  margin: auto;
 }
 
+#filter,
+#sort {
+  color: black;
+}
+
+.product-search input[type=text],
+.product-search button {
+  padding: 10px;
+  border: none;
+}
+
+.product-search input[type=text] {
+  width: 10rem;
+  color: black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.product-search button {
+  float:right;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  background-color: grey;
+}
 
 /* flex card */
 
@@ -209,26 +238,7 @@ nav div.right {
     color: black;
 }
 
-.product-search input[type=text],
-.product-search button {
-    float: left;
-    padding: 10px;
-    border: none;
-}
 
-.product-search input[type=text] {
-    width: 16rem;
-    color: black;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.product-search button {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    cursor: pointer;
-    background-color: grey;
-}
 
 
 /* products search results */
