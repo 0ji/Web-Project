@@ -124,7 +124,7 @@ function createProductCard(container, product) {
     name.innerHTML = product.title;
     price.innerHTML = '$' + product.price;
     rating.innerHTML = product.rate + ' stars';
-    desc.innerHTML = 'desc: ' + product.description;
+    desc.innerHTML = product.description;
     button.innerHTML = "Add to cart";
 
     // appends DOM elements to product card
