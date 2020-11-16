@@ -24,10 +24,10 @@ function loadPage() {
     var urlParams = new URLSearchParams(queryString);
     var query = urlParams.get('query');
     var lowPrice = urlParams.get('lowPrice') || 0;
-    var highPrice = urlParams.get('highPrice') || 999999999;
+    var highPrice = urlParams.get('highPrice');
     var lowStar = urlParams.get('lowStar') || 0;
-    var highStar = urlParams.get('highStar') || 5;
-    var sortOrder = urlParams.get('sort') || 'starH2L';
+    var highStar = urlParams.get('highStar');
+    var sortOrder = urlParams.get('sort');
     var container = document.getElementById("products"); // product container
     var resultcounter = 0; // counter to keep track of number of matching products
 
@@ -74,11 +74,11 @@ function loadPage() {
 
 // filter functions
 function filterPrice(least, greatest, arr) {
-    return arr.filter(product => (product.price >= least && product.price <= greatest));
+    return arr.filter(product => (product.price >= (least) && product.price <= (greatest || 9999999)));
 }
 
 function filterRating(least, greatest, arr) {
-    return arr.filter(product => (product.rate >= least && product.rate <= greatest));
+    return arr.filter(product => (product.rate >= least && product.rate <= (greatest || 5)));
 }
 
 // sort function
@@ -91,16 +91,16 @@ function sort(order, arr) {
         return arr.sort(function(a, b) {
             return b.price - a.price;
         });
-    } else if (order == 'ratingL2H') {
+    } else if (order == 'starL2H') {
         return arr.sort(function(a, b) {
             return a.rate - b.rate;
         });
-    } else if (order == 'ratingH2L') {
+    } else if (order == 'starH2L') {
         return arr.sort(function(a, b) {
             return b.rate - a.rate;
         });
     } else {
-        return arr
+        return arr;
     }
 }
 // creates product card and inserts it into page
@@ -109,9 +109,9 @@ function createProductCard(container, product) {
     var productCard = document.createElement("LI");
     productCard.className = "product-card";
     productCard.setAttribute("id", product.id);
-    // productCard.setAttribute("category", product.category); // planned feature, to implement sorting by category
 
     // creates HTML DOM elements for product card
+    var aID = document.createElement("A");
     var img = document.createElement("IMG");
     var name = document.createElement("H1");
     var price = document.createElement("H2");
@@ -120,6 +120,7 @@ function createProductCard(container, product) {
     var button = document.createElement("BUTTON");
 
     // updates DOM elements with product elements
+    aID.href = "./productpage.html?id=" + product.id;
     img.src = product.imgsrc;
     name.innerHTML = product.title;
     price.innerHTML = '$' + product.price;
@@ -128,8 +129,9 @@ function createProductCard(container, product) {
     button.innerHTML = "Add to cart";
 
     // appends DOM elements to product card
-    productCard.appendChild(img);
-    productCard.appendChild(name);
+    aID.appendChild(img);
+    aID.appendChild(name);
+    productCard.appendChild(aID);
     productCard.appendChild(price);
     productCard.appendChild(rating);
     productCard.appendChild(desc);
