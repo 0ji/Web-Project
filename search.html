@@ -60,8 +60,7 @@
         <div></div>
         <div class="search-container">
             <div class="sidenav">
-
-                <p style="color: lightgray;">Home > Category > Sub-Category</p>
+                <h2>Search Page</h2>
                 <button class="dropdown-btn">Spaceship Parts <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-container">
                     <a href="#">Subcat 1</a>
@@ -87,49 +86,31 @@
                     <a href="#">Subcat 3</a>
                 </div>
                 <a href="#">Product with no dropdown</a>
-
+                <h4>Filters & Sort</h4>
+                <form action="/search.html" class="filtersort">
+                    <div>
+                        <label>Price: </label> $<input type="text" name="lowPrice" id="lowPrice" min="0" placeholder="min"> to $<input type="text" name="highPrice" id="highPrice" min="0" placeholder="max"><br><br>
+                        <label>Rating: </label> <input type="number" name="lowStar" id="lowStar" min="0" max="5">&starf; to <input type="number" name="highStar" id="highStar" min="0" max="5">&starf;<br><br>
+                    </div>
+                    <div>
+                        <label>Sort:</label>
+                        <select name="sort" class="sort">
+                            <option selected diabled hidden></option>
+                            <option value="priceL2H">($) Low to High</option>
+                            <option value="priceH2L">($) High to Low</option>
+                            <option value="starL2H">(&star;) Low to High</option>
+                            <option value="starH2L">(&starf;) High to Low</option>
+                        </select>
+                    </div>
+                    <!-- hidden search input to pass on previous query -->
+                    <input type="hidden" id="hiddenSearch" name="query">
+                    <br>
+                    <button style="text-align: center; width: 4rem;">apply</button>
+                </form>
             </div>
             <!-- container for all things product-search related. -->
             <div class="product-container">
-                <!-- TODO: add JQuery/Jscript to dynamically show bracketed fields. -->
-                <h2>Your search for [search field here] yielded [#] results</h2>
-                <div class="filter-bar">
-                    <!-- TODO: search results? (jscript) -->
-
-                    <!-- Filters (Sort by, filter) -->
-                    <div class="filters">
-                        <!-- Filter By Dropdown -->
-                        <div class="filter-grp">
-                            <label for="filter">Filter</label>
-                            <select name="Filter" id="filter">
-                                <optgroup label="Price">
-                                    <option value="0-10">$0.00-$9.99</option>
-                                    <option value="10-25">$10.00-$24.99</option>
-                                    <option value="25-50">$24.99-$49.99</option>
-                                    <option value="50-100">$49.99-$99.99</option>
-                                    <option value="100+">$100.00+</option>
-                                </optgroup>
-                                <optgroup label="Rating">
-                                    <option value="5 Stars">&starf;&starf;&starf;&starf;&starf;</option>
-                                    <option value="4 Stars">&starf;&starf;&starf;&starf;&star;</option>
-                                    <option value="3 Stars">&starf;&starf;&starf;&star;&star;</option>
-                                    <option value="2 Stars">&starf;&starf;&star;&star;&star;</option>
-                                    <option value="1 Star">&starf;&star;&star;&star;&star;</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <!-- Sort By Dropdown -->
-                        <div class="filter-grp">
-                            <label for="sort">Sort</label>
-                            <select name="Sort" id="sort">
-                                <option value="lowtohigh">($) Low to High</option>
-                                <option value="hightolow">($) High to Low</option>
-                                <option value="lowtohigh">(&star;) Low to High</option>
-                                <option value="hightolow">(&starf;) High to Low</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                <h2 id='search_header'>Search Results Page</h2>
                 <!-- List of Products
                 TODO: JQuery dynamically showing products based on search query. -->
                 <ul id="products">
@@ -138,7 +119,6 @@
                         <h1>Placeholder 1</h1>
                         <p>$1234.56</p>
                         <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum odio nec accumsan tristique. Nulla tristique ultrices mauris, eu volutpat nulla luctus a. Cras sit amet consequat lorem, nec porttitor eros. Vestibulum ante
                             ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
                         <button>Add to cart</button>
@@ -148,7 +128,6 @@
                         <h1>Placeholder 2</h1>
                         <p>$1234.56</p>
                         <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>(x Reviews)</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         <button>Add to cart</button>
                     </li>
@@ -175,6 +154,7 @@
     </main>
 
     <script src="js/search.js"></script>
+    <script src="js/products.js"></script>
 </body>
 
 <!-- Footer -->
