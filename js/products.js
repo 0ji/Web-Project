@@ -4,7 +4,7 @@ var products = [{
         title: "Dominus Battle Car",
         price: 199,
         description: "Popular across the Galaxy, this is a must have staple!",
-        imgsrc: "img/car1.png",
+        imgsrc: "img/element1.png",
         rate: 2
     },
     {
