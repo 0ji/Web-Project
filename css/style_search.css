@@ -163,6 +163,9 @@ nav div.right {
 
 .filtersort {
     margin-top: 1rem;
+}
+
+.filtersort select {
     color: black;
 }
 
@@ -276,11 +279,16 @@ nav div.right {
     height: 600px;
 }
 
+.product-card h1,
+.productcard p {
+    margin: 1rem;
+}
+
 .product-card img {
     display: block;
     border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    align-self: center;
 }
 
 .product-card button {

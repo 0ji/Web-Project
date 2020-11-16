@@ -94,14 +94,15 @@
                     <div>
                         <label>Sort:</label>
                         <select name="Sort" class="sort">
-                                <option value="lowtohigh">($) Low to High</option>
-                                <option value="hightolow">($) High to Low</option>
-                                <option value="lowtohigh">(&star;) Low to High</option>
-                                <option value="hightolow">(&starf;) High to Low</option>
+                            <option selected diabled hidden></option>
+                            <option value="lowtohigh">($) Low to High</option>
+                            <option value="hightolow">($) High to Low</option>
+                            <option value="lowtohigh">(&star;) Low to High</option>
+                            <option value="hightolow">(&starf;) High to Low</option>
                         </select>
                     </div>
                     <br>
-                    <button>apply changes</button>
+                    <button style="text-align: center; width: 4rem;">apply</button>
                 </form>
             </div>
             <!-- container for all things product-search related. -->
@@ -115,6 +116,7 @@
                         <div class="filter-grp">
                             <label for="filter">Filter</label>
                             <select name="Filter" id="filter">
+                                <option selected diabled hidden></option>
                                 <optgroup label="Price">
                                     <option value="0-10">$0.00-$9.99</option>
                                     <option value="10-25">$10.00-$24.99</option>
@@ -134,7 +136,8 @@
                         <!-- Sort By Dropdown -->
                         <div class="filter-grp">
                             <label for="sort">Sort</label>
-                            <select name="Sort" class="sort">
+                            <select name="Sort" id="sort">
+                                <option selected diabled hidden></option>
                                 <option value="lowtohigh">($) Low to High</option>
                                 <option value="hightolow">($) High to Low</option>
                                 <option value="lowtohigh">(&star;) Low to High</option>

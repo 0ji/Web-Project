@@ -67,6 +67,7 @@ window.addEventListener('load', (event) => {
     // update query field to match, and update search results header string.
     document.getElementById("search_field").value = query;
     document.getElementById("search_header").innerHTML = '"' + query + '" has yielded ' + resultcounter + ' results.';
+    // update filter/sorts to match
 
 });
 
