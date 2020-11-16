@@ -46,19 +46,19 @@ window.addEventListener('load', (event) => {
     var container = document.getElementById("products"); // product container
     if ((query != "") && (query != null)) {
         container.innerHTML = ''; // clear products
-        alert("You searched for " + query);
+        //alert("You searched for " + query);
         // loops through js product array   -- can also use list.forEach(function(product){}), product=i
         for (i = 0; i < list.length; i++) {
             var product = list[i];
             var title = product.title.toUpperCase();
             if (title.includes(query.toUpperCase())) {
-                alert("MATCH: \n" + title + "/" + query.toUpperCase());
+                //alert("MATCH: \n" + title + "/" + query.toUpperCase());
                 createProductCard(container, product);
             }
         }
-        alert("for done");
+        //alert("for done");
     } else {
-        alert('no query found');
+        //alert('no query found');
         // keep default products on page (hard-coded)
     }
 
