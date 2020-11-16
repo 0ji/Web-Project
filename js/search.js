@@ -1,7 +1,6 @@
 //JS dropdown ( taken from http://w3schools-fa.ir/howto/howto_js_dropdown_sidenav.html )>
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
-
 for (i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -14,73 +13,86 @@ for (i = 0; i < dropdown.length; i++) {
     });
 }
 
-// // javascript list of products
-// var list = [{
-//         "title": "Example 1",
-//         "img": "img/product-placeholder.png",
-//         "price": "$123.45",
-//         "rating": "5 stars",
-//         "reviews": "4 reviews",
-//         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-//         "category": "donuts-category"
-//     },
-//     {
-//         "title": "Example 2",
-//         "img": "img/product-placeholder.png",
-//         "price": "223.45",
-//         "rating": "4",
-//         "reviews": "3",
-//         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-//         "category": "example 2"
-//     }
-// ];
-
 // loads search result, if any.
 // learned from https://www.sitepoint.com/get-url-parameters-with-javascript/
 // TODO: add options to sort/filter at end.
-window.addEventListener('load', (event) => {
+window.addEventListener('load', loadPage);
+
+function loadPage() {
     // get parameters from URL
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
-    query = urlParams.get('query');
-    lowPrice = urlParams.get('lowPrice');
-    highPrice = urlParams.get('lowPrice');
-
+    var query = urlParams.get('query');
+    var lowPrice = urlParams.get('lowPrice') || 0;
+    var highPrice = urlParams.get('highPrice') || 999999999;
+    var lowStar = urlParams.get('lowStar') || 0;
+    var highStar = urlParams.get('highStar') || 5;
+    var sortOrder = urlParams.get('sort') || 'starH2L';
     var container = document.getElementById("products"); // product container
     var resultcounter = 0; // counter to keep track of number of matching products
-    if ((query != "") && (query != null)) {
-        container.innerHTML = ''; // clear products
-        // loops through js product array   -- can also use list.forEach(function(product){}), product=i
-        for (i = 0; i < products.length; i++) {
-            var product = products[i];
-            var title = product.title.toUpperCase();
-            if (title.includes(query.toUpperCase())) {
-                createProductCard(container, product);
-                resultcounter++;
-            }
-        }
-    } else {
-        container.innerHTML = '';
-        for (i = 0; i < products.length; i++) {
-            var product = products[i];
-            var title = product.title.toUpperCase();
+
+    // sorts/filters array
+    var productlist = products;
+    productlist = filterPrice(lowPrice, highPrice, productlist);
+    productlist = filterRating(lowStar, highStar, productlist);
+    productlist = sort(sortOrder, productlist);
+
+
+    container.innerHTML = ''; // clear products
+    // loops through js product array
+    for (i = 0; i < productlist.length; i++) {
+        var product = productlist[i];
+        var title = product.title.toUpperCase();
+        if (title.includes(query.toUpperCase())) {
             createProductCard(container, product);
+            resultcounter++;
         }
-        // keep default products on page (hard-coded)
     }
 
+    document.getElementById("search_header").innerHTML = 'Your search has yielded ' + resultcounter + ' results.';
 
 
     // update query field to match, and update search results header string.
     document.getElementById("search_field").value = query;
     document.getElementById("hiddenSearch").value = query;
-    document.getElementById("search_header").innerHTML = '"' + query + '" has yielded ' + resultcounter + ' results.';
     // update filter/sorts to match
-
-});
-
+    document.getElementById("lowStar").value = lowStar;
+    document.getElementById("highStar").value = highStar;
+    document.getElementById("lowPrice").value = lowPrice;
+    document.getElementById("highPrice").value = highPrice;
+    document.querySelector("[value=" + sortOrder + "]").selected = true;
+}
 // add onclick which redirects to productpage with GET product ID (e.g. productpage?id=5)
 
+// filter functions
+function filterPrice(least, greatest, arr) {
+    return arr.filter(product => (product.price >= least && product.price <= greatest));
+}
+
+function filterRating(least, greatest, arr) {
+    return arr.filter(product => (product.rate >= least && product.rate <= greatest));
+}
+
+// sort function
+function sort(order, arr) {
+    if (order == 'priceL2H') {
+        return arr.sort(function(a, b) {
+            return a.price - b.price;
+        });
+    } else if (order == 'priceH2L') {
+        return arr.sort(function(a, b) {
+            return b.price - a.price;
+        });
+    } else if (order == 'ratingL2H') {
+        return arr.sort(function(a, b) {
+            return a.rate - b.rate;
+        });
+    } else if (order == 'ratingH2L') {
+        return arr.sort(function(a, b) {
+            return b.rate - a.rate;
+        });
+    }
+}
 // creates product card and inserts it into page
 function createProductCard(container, product) {
     // creates DOM product card
