@@ -30,19 +30,28 @@ function loadPage() {
     var sortOrder = urlParams.get('sort') || 'starH2L';
     var container = document.getElementById("products"); // product container
     var resultcounter = 0; // counter to keep track of number of matching products
+
     // sorts/filters array
     var productlist = products;
     productlist = filterPrice(lowPrice, highPrice, productlist);
     productlist = filterRating(lowStar, highStar, productlist);
-    //productlist = sort(sortOrder, productlist);
+    productlist = sort(sortOrder, productlist);
 
 
     container.innerHTML = ''; // clear products
-    // loops through js product array
-    for (i = 0; i < productlist.length; i++) {
-        var product = productlist[i];
-        var title = product.title.toUpperCase();
-        if (title.includes(query.toUpperCase())) {
+    if (!!query) {
+        // loops through js product array
+        for (i = 0; i < productlist.length; i++) {
+            var product = productlist[i];
+            var title = product.title.toUpperCase();
+            if (title.includes(query.toUpperCase())) {
+                createProductCard(container, product);
+                resultcounter++;
+            }
+        }
+    } else {
+        for (i = 0; i < productlist.length; i++) {
+            var product = productlist[i];
             createProductCard(container, product);
             resultcounter++;
         }
@@ -90,6 +99,8 @@ function sort(order, arr) {
         return arr.sort(function(a, b) {
             return b.rate - a.rate;
         });
+    } else {
+        return arr
     }
 }
 // creates product card and inserts it into page
