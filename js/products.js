@@ -204,7 +204,7 @@ var products = [{
   price: 25000,
   description: "Introductory level Mech with basics for on ground support. Limited space and air abilties or equipment loadouts.",
   imgsrc: "img/element1.png",
-  rate: 3.4
+  rate: 3.5
 },
 {
   id: 26,
@@ -212,7 +212,7 @@ var products = [{
   price: 28000,
   description: "Light armour Mech, fast, good mobility but low hitpoints. Can make up for it by hitting hard, and fast.",
   imgsrc: "img/verus.png",
-  rate: 4
+  rate: 2
 },
 {
   id: 27,
@@ -220,7 +220,7 @@ var products = [{
   price: 30000,
   description: "Basic level light Mech made for urban use and coexistance with Humans. Often used in police forces and so on.",
   imgsrc: "img/element3.png",
-  rate: 1
+  rate: 2.5
 },
 {
   id: 28,
@@ -229,5 +229,37 @@ var products = [{
   description: "Medium armoured Mech with a heavy weapon loadout. Favoured by bounty hunters, mercenaries and military for the combination of speed and weaponry.",
   imgsrc: "img/element4.png",
   rate: 5
+},
+{
+  id: 29,
+  title: "Inferno Mech",
+  price: 150000,
+  description: "Heavy armoured Mech. Can transform into an all terrain tank, fly and has heavy firepower. Only downside is low mobility in close combat.",
+  imgsrc: "img/element5.png",
+  rate: 3.5
+},
+{
+  id: 30,
+  title: "Mastemah Mech",
+  price: 250000,
+  description: "Even heavier armour, used in orbital bombardment and space fights quite often. Also very popular in ranger combat due to it's sheer firepower and strength.",
+  imgsrc: "img/element6.png",
+  rate: 4.5
+},
+{
+  id: 31,
+  title: "Amdusias Mech",
+  price: 500000,
+  description: "The heaviest armoured mech in production by Sakura Industries. Used as a sniper, or flagship Mech for officers most often. It's incredible armour uses the best technological advances from across the Galaxy.",
+  imgsrc: "img/element7.png",
+  rate: 5
+},
+{
+  id: 32,
+  title: "Moon Mafia Management",
+  price: 950000,
+  description: "You've won an all inclusive one-way trip to the out reaches of space! Don't worry, all your expenses are taken care of. We'll be shipping you out in a storage container within 48 hours. Our agents will come get you. Don't try to resist.",
+  imgsrc: "img/spaced.png",
+  rate: 10
 }
 ];
