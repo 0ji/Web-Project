@@ -12,7 +12,7 @@ var products = [{
         title: "Ship",
         price: 900,
         description: "shp for space",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/spaceship.png",
         rate: 4
     },
     {
@@ -20,7 +20,7 @@ var products = [{
         title: "toilet",
         price: 1200,
         description: "pooping in out of space :)",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/spacetoilet.png",
         rate: 1
     },
     {
@@ -28,7 +28,7 @@ var products = [{
         title: "MK890",
         price: 200,
         description: "Ray gun",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/raygun.png",
         rate: 2
     },
     {
@@ -36,7 +36,7 @@ var products = [{
         title: "Von Braun thrusters",
         price: 1200,
         description: "rocket thrusters",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/vonbraun.png",
         rate: 4
     },
     {
@@ -44,7 +44,7 @@ var products = [{
         title: "Exoskeleton",
         price: 1800,
         description: "wearable exo adds 100lbs to your lift",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/exoskeleton.png",
         rate: 5
     },
     {
@@ -52,7 +52,7 @@ var products = [{
         title: "jetpack",
         price: 1700,
         description: "air pressured jetpacks for zero g's",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/jetpack.png",
         rate: 4
     },
     {
@@ -60,7 +60,7 @@ var products = [{
         title: "Nuclear batteries",
         price: 12200,
         description: "Nuclear powered battery",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/nuclearbattery.png",
         rate: 4
     },
     {
@@ -68,7 +68,7 @@ var products = [{
         title: "Helmet",
         price: 1200,
         description: "Electronic helmet with A.I",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/helmet.png",
         rate: 4
     },
     {
@@ -76,7 +76,7 @@ var products = [{
         title: "holoprojector",
         price: 1200,
         description: "projects your voice calls into holograms",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/holoprojector.png",
         rate: 4
     },
     {
@@ -84,7 +84,7 @@ var products = [{
         title: "solar panels ",
         price: 100,
         description: "solar panels can recharge nuclear batteries with solar winds ",
-        imgsrc: "img/element2.png",
+        imgsrc: "img/products/solarpanel.png",
         rate: 4
     },
     {
@@ -166,5 +166,37 @@ var products = [{
         description: "HotWheels classic enters the battle!",
         imgsrc: "img/car10.png",
         rate: 1
+    },
+    {
+        id: 21,
+        title: "toilet MK2",
+        price: 99999,
+        description: "Superior Toilet Reforged Folded AI Technology",
+        imgsrc: "img/products/spacetoilet2.png",
+        rate: 1
+    },
+    {
+        id: 22,
+        title: "vibing cat",
+        price: 1,
+        description: "he vibing, very rare dance & space species",
+        imgsrc: "img/products/catvibin.gif",
+        rate: 5
+    },
+    {
+        id: 23,
+        title: "toilet MK3",
+        price: 999999,
+        description: "clears any micronanobiogorisms from your regions",
+        imgsrc: "img/products/spacetoilet3.png",
+        rate: 3
+    },
+    {
+        id: 24,
+        title: "toilet MK0",
+        price: 40,
+        description: "prehistoric toilet with prehistoric cleaner",
+        imgsrc: "img/products/spacetoilet4.png",
+        rate: 5
     }
 ];
