@@ -1,6 +1,6 @@
 // array of product objects
 var products = [{
-        id: 1,
+        id: 0,
         title: "Introductory Intergalactic Mech",
         price: 599,
         description: "Mech for war",
@@ -8,7 +8,7 @@ var products = [{
         rate: 5
     },
     {
-        id: 2,
+        id: 1,
         title: "Ship",
         price: 900,
         description: "shp for space",
@@ -16,7 +16,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 3,
+        id: 2,
         title: "toilet",
         price: 1200,
         description: "pooping in out of space :)",
@@ -24,7 +24,7 @@ var products = [{
         rate: 1
     },
     {
-        id: 4,
+        id: 3,
         title: "MK890",
         price: 200,
         description: "Ray gun",
@@ -32,7 +32,7 @@ var products = [{
         rate: 2
     },
     {
-        id: 5,
+        id: 4,
         title: "Von Braun thrusters",
         price: 1200,
         description: "rocket thrusters",
@@ -40,7 +40,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 6,
+        id: 5,
         title: "Exoskeleton",
         price: 1800,
         description: "wearable exo adds 100lbs to your lift",
@@ -48,7 +48,7 @@ var products = [{
         rate: 5
     },
     {
-        id: 7,
+        id: 6,
         title: "jetpack",
         price: 1700,
         description: "air pressured jetpacks for zero g's",
@@ -56,7 +56,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 8,
+        id: 7,
         title: "Nuclear batteries",
         price: 12200,
         description: "Nuclear powered battery",
@@ -64,7 +64,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 9,
+        id: 8,
         title: "Helmet",
         price: 1200,
         description: "Electronic helmet with A.I",
@@ -72,7 +72,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 10,
+        id: 9,
         title: "holoprojector",
         price: 1200,
         description: "projects your voice calls into holograms",
@@ -80,7 +80,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 11,
+        id: 10,
         title: "solar panels ",
         price: 100,
         description: "solar panels can recharge nuclear batteries with solar winds ",
@@ -88,7 +88,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 12,
+        id: 11,
         title: "Dominus Battle Car",
         price: 199,
         description: "Popular across the Galaxy, this is a must have staple!",
@@ -96,7 +96,7 @@ var products = [{
         rate: 2
     },
     {
-        id: 13,
+        id: 12,
         title: "Komodo Battle Car",
         price: 400,
         description: "An aggressive sports model for all the tuners out there",
@@ -104,7 +104,7 @@ var products = [{
         rate: 2.5
     },
     {
-        id: 14,
+        id: 13,
         title: "Dark Knight Rises Tumbler",
         price: 2500,
         description: "For the heaviest duty battle in the Galaxy. Used by Bruce Wayne in Gotham",
@@ -112,7 +112,7 @@ var products = [{
         rate: 4.5
     },
     {
-        id: 15,
+        id: 14,
         title: "99' Nissan Skyline GTR R34",
         price: 1500,
         description: "A classic for the Japanese sports scene of the 90s! Now joining battle",
@@ -120,7 +120,7 @@ var products = [{
         rate: 5
     },
     {
-        id: 16,
+        id: 15,
         title: "De'Lorean Time Machine",
         price: 5000,
         description: "Back to the Future!",
@@ -128,7 +128,7 @@ var products = [{
         rate: 4
     },
     {
-        id: 17,
+        id: 16,
         title: "Vulcan Battle Car",
         price: 500,
         description: "Battle Car made by our galactic neightbors to join the games. Now sold to Earth!",
@@ -136,7 +136,7 @@ var products = [{
         rate: 2
     },
     {
-        id: 18,
+        id: 17,
         title: "Animus GP Battle Car",
         price: 999,
         description: "Formula One racer enters the battle!",
@@ -144,7 +144,7 @@ var products = [{
         rate: 3
     },
     {
-        id: 19,
+        id: 18,
         title: "Breakout Type-S",
         price: 599,
         description: "Re-invention of a classic Earth-era Rocket battle car",
@@ -152,7 +152,7 @@ var products = [{
         rate: 1.5
     },
     {
-        id: 20,
+        id: 19,
         title: "Peregrine TT",
         price: 1250,
         description: "Designed by the Covenant to enter the games. Available for the first time!",
@@ -160,7 +160,7 @@ var products = [{
         rate: 0.5
     },
     {
-        id: 21,
+        id: 20,
         title: "Hotwheels Twin Mill III",
         price: 750,
         description: "HotWheels classic enters the battle!",
