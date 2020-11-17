@@ -27,7 +27,7 @@ function loadPage() {
     var highPrice = urlParams.get('highPrice');
     var lowStar = urlParams.get('lowStar') || 0;
     var highStar = urlParams.get('highStar');
-    var sortOrder = urlParams.get('sort');
+    var sortOrder = urlParams.get('sort') || 'nosort';
     var container = document.getElementById("products"); // product container
     var resultcounter = 0; // counter to keep track of number of matching products
 
@@ -68,7 +68,8 @@ function loadPage() {
     document.getElementById("highStar").value = highStar;
     document.getElementById("lowPrice").value = lowPrice;
     document.getElementById("highPrice").value = highPrice;
-    document.querySelector("[value=" + sortOrder + "]").selected = true;
+    document.querySelector("[value=" + (sortOrder) + "]").selected = true;
+    alert("congratulations! you have won a prize!! click HERE to REDEEM!!!");
 }
 // add onclick which redirects to productpage with GET product ID (e.g. productpage?id=5)
 
