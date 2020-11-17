@@ -234,7 +234,11 @@ nav div.right {
 
 
 /* CSS code to create a visually adapting star rating in pure HTML and CSS. Modified and adapted from: https://github.com/mukulkant/Star-rating-using-pure-css-->*/
-
+.starrating {
+margin: 0px;
+padding: 0;
+padding-left: 10px;
+}
 .rating {
     height: 25%;
     display: flex;
