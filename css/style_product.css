@@ -10,10 +10,7 @@ body {
     background-image: url("/img/background_star.png");
     margin: auto;
 }
-
-
 /* Top Header */
-
 div.TopBanner {
     display: block;
     height: 15vw;
@@ -30,9 +27,7 @@ div.BannerText {
     font-size: min(2vw, 40px);
 }
 
-
 /* Sticky Navigation */
-
 nav {
     display: flex;
     flex: 100px;
@@ -64,13 +59,12 @@ nav div.right {
     overflow: hidden;
 }
 
-.logo,
-.item {
-    background-color: #028090;
-    margin: 10px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 15px;
+.logo, .item {
+  background-color: #028090;
+  margin: 10px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 15px;
 }
 
 .coolbuttons {
@@ -109,64 +103,76 @@ nav div.right {
     background-color: grey;
 }
 
-
 /*** main css (product) ***/
-
-.product-title {
-    text-align: center;
-    padding: none;
-    margin: none;
-}
-
 .product-placement {
-    display: flex;
-    width: 100%;
-    min-height: 75vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 30px;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
 }
-
-.image-carousel {
-    width: 250px;
-    background-color: #00295e31;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-.placeholder {
-    height: 80vh;
-    overflow: hidden scroll;
-}
-
-.placeholder img {
-    width: 50%;
-    margin: 50px;
-}
-
 .product-image-container {
-    flex-direction: column;
-    width: 75%;
-    border: 5px, black;
-    background-color: #0824499c;
-    border-radius: 30px;
+  margin-top: 25px;
+  width: 75%;
+  border: 5px, black;
+  background-color: #0824499c;
+  min-height: 100%;
+}
+
+.side-flex {
+  display: flex;
+  height: 90%;
 }
 
 .product-image {
-    justify-content: center;
+  display: flex;
+  border: 4mm ridge #3c5676;
+  border-radius: 25px;
+  height: 85%;
+}
+
+.imgcont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.titleflex {
+  text-align: center;
+  color: #B0C4DE;
+  font-family: 'Bitter', fantasy;
+  font-size: 30px;
+  font-weight: bolder;
+  text-shadow:5px 5px 10px #6D91C2;
+}
+
+.desc-flex {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+}
+.descborder {
+  display:flex;
+  padding: 20px;
+  background-color: rgba(57, 131, 192, 0.2);
+  border: 4mm ridge #3c5676;
+  border-radius: 50px;
 }
 
 .product-description {
-    margin-top: 25px;
-    text-align: center;
+  margin: none;
 }
 
 .iteminfo {
-    float: right;
-    width: 25%;
-    border: 5px, black;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background-color: #104e9e00;
+  margin-top: 50px;
+  float: right;
+  width: 25%;
+  border: 5px, black;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #104e9e00;
 }
 
 .priceinfo {
@@ -202,10 +208,10 @@ nav div.right {
 }
 
 .add-to-cart button {
-    height: 5vw;
-    width: 10vw;
-    border-radius: 50px;
-    background-color: #2e96a3ff;
+  height: 25px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: #2e96a3ff;
 }
 
 .add-to-cart button:hover {
@@ -264,11 +270,11 @@ nav div.right {
 /* flex card */
 
 .flex-card {
-    margin-top: 25px;
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .flextext {
