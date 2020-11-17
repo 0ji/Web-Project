@@ -116,7 +116,7 @@ nav div.right {
   width: 75%;
   border: 5px, black;
   background-color: #0824499c;
-  min-height: 100%;
+  height: 90%;
 }
 
 .side-flex {
