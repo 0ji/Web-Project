@@ -5,7 +5,7 @@ function loadProduct(index) {
     var p = products[index];
     // grabs the title from the title class html
 
-    var title =  document.getElementById("title1");
+    var title = document.getElementById("title1");
     // gives access to the div that contains the price
     var price = document.getElementById("priceDisplay");
     // desc
@@ -15,7 +15,7 @@ function loadProduct(index) {
     var img = document.getElementsByClassName("product-image").item(0);
     // img
     var img = document.getElementsByClassName("product-image").item(0);
-    img.setAttribute("src" , p.imgsrc);
+    img.setAttribute("src", p.imgsrc);
     title.innerText = p.title;
     price.innerText = p.price;
     description.innerText = p.description;
@@ -29,6 +29,7 @@ window.onload = function() {
     var product_id = window.location.search.split("id=")[1];
     // loads products
     loadProduct(product_id);
+    alert("congratulations! you have won a prize!! click HERE to REDEEM!!!c̶̨̬̤̼̲̜̘̹̝̖͕̼̘͍̐͗̌̾l̵͍̆̋i̸̬̗̽̂͆̽́̍̽͝c̸̡̧̮͐̎̆͆̐͑͋̈͌̒̆̓͜͜k̶̛̖̲̱͇͍̘͈͕͍̣̒͆̀̈͌̈́͜͠͠ ̷̡̢̤̪̣̙͕̼͙̪͒́̍͝h̷̞͖̩̞͈͓̦̭̑̂͂͗̈́̈́̀̈́̂̌͂̚͝ͅe̵̢̢̤̘̩̫͉͖͓͚̤̖̪̜͂̐͐̊͂͆͝͝r̸̛̟̥̳̜̫̼̯̟̬̤̹̜̂͊̚ȩ̵̡̡̢̝͓̬̜̦͉̘̺̿̀́͋ ̶̟͖͓̫̮̲̥͈͓̳̤͈̏̄͋̉́͜o̷̢̮̜̞̪̯̣̓͑̅̈́̽̈́͌̉̕r̷͍͍̙̖͍̺̘̫͎̩̜̩͇̂̾̅́̆̆̈́͋̎̕͜ ̸̢̋̔̆͘̕į̸͖̖̞͖̞̪͔̱͕̺̪͙͒̓̽̅́͜͝ ̸̧̛̺̖̩͇͑̂̔̂w̸͈̪̻͈͓̪̣̮̹̝̳̼͕͠i̶̠͍͊͌l̸̡̳̩̞͈̤̗͎̋̑́̉ḷ̸̦̗̲̳̽̾̈͗͗̌͌̉̏̊ ̶̧̨̨̳͎͚̪̖͕͈͊̂̎̄̆̓̂̉ç̶̭̱͉͙̞̤̺̱̬̦͚͖̬̤̇̈̇̀͑̕õ̷̧̧̞̞͍̩̤̞̉ḿ̵̭̙̖͒̎e̵̛̠̖̹̹̖̿̃͒͋̓̓̚̕̚͜ ̷̮͙͓̖̲͂f̵̬̖͇̼̝͙̩͋͆͋̚ơ̷̛͓̳͚̩̤̬̺̏̔̔̍̓́̈̽͌̽̽͋͜͠r̶̠̥͈͍͕̖̐͊̊̐̿͆͆͐̕ ̷̧̛̛̘̞̗͈̟̤̭̯̤̥̱̓̒̓̀͐́͘͜͝y̶̪͈͙͉̤̦̼̩̽͌̓͝͝o̷̦͇̥̤̺͆͝u̴͙͉͓̗̗͗̌̔̐̄̀͛̈̈́̓̾̈́̕͘͠ͅ");
 }
 
 function updatePrice() {

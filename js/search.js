@@ -69,7 +69,6 @@ function loadPage() {
     document.getElementById("lowPrice").value = lowPrice;
     document.getElementById("highPrice").value = highPrice;
     document.querySelector("[value=" + (sortOrder) + "]").selected = true;
-    alert("congratulations! you have won a prize!! click HERE to REDEEM!!!");
 }
 // add onclick which redirects to productpage with GET product ID (e.g. productpage?id=5)
 
