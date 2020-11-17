@@ -40,7 +40,7 @@ function loadProduct(index) {
 function updatePrice(p) {
     var quantity = document.getElementsByName("quantityinput")
     var price = document.getElementsByClassName("priceinfo").item(0)
-    var totalPrice = p.quantity * p.price
+    var totalPrice = quantity * p.price
 
     price.innerText = p.price
 
