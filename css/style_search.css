@@ -272,7 +272,7 @@ nav div.right {
     background-color: rgba(255, 255, 255, 0.26);
     border-radius: 10px;
     width: 20rem;
-    height: 600px;
+    height: auto;
 }
 
 .product-card h1,
