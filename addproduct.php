@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+
+?>
+
 <html lang="en">
 
 <head>
@@ -7,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Koji Dino, Usaamah Gill, Akshay Gokani">
 
-    <title>Space Website</title>
+    <title>BlackStarAlliance - Upload new Products</title>
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/ea25cca267.js" crossorigin="anonymous"></script>
@@ -16,7 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
 
     <!-- Custom Stylesheet-->
-    <link rel="stylesheet" href="css/style_landing.css">
+    <link rel="stylesheet" href="css/style_upload.css">
 </head>
 
 <body>
@@ -54,45 +57,11 @@
                         </form>
                     </li>
                 </div>
-                <button class="item coolbuttons" href="#" onclick="location.href='./addproduct.php'">Log In</button>
+                <button class="item coolbuttons" href="#">Log In</button>
                 <button class="item coolbuttons" href="#">Sign Up</button>
                 <button class="item coolbuttons" href="#"><i class="fas fa-shopping-cart"></i></button>
             </div>
         </nav>
-
-        <!-- Product Category Navigation  -->
-        <div class="flex-card">
-            <div class="gallery">
-                <a target="_self" href="search.html?category=SpaceShips">
-                    <img src="img/CATEGORY/SPACE_VEHICLES.png" alt="ship">
-                    <div class="desc">SpaceShips</div>
-                </a>
-            </div>
-            <div class="gallery">
-                <a target="_self" href="search.html?category=SpaceParts">
-                    <img src="img/CATEGORY/PART.png" alt="ship">
-                    <div class="desc">SpaceParts</div>
-                </a>
-            </div>
-            <div class="gallery">
-                <a target="_self" href="search.html?category=SpaceGear">
-                    <img src="img/CATEGORY/OUTERWEAR.png" alt="ship">
-                    <div class="desc">SpaceGear</div>
-                </a>
-            </div>
-            <div class="gallery">
-                <a target="_self" href="search.html?category=SpaceTools">
-                    <img src="img/CATEGORY/WEAPONS.png" alt="ship">
-                    <div class="desc">SpaceTools</div>
-                </a>
-            </div>
-            <div class="gallery">
-                <a target="_self" href="search.html?category=SpaceIns">
-                    <img src="img/CATEGORY/INSURANCE.png" alt="ship">
-                    <div class="desc">Space Insurance</div>
-                </a>
-            </div>
-        </div>
 
         <!-- Text (or jumbotron) -->
         <h1 class="desc">About Us</h1>
@@ -117,83 +86,6 @@
             <div class="flextext">
                 <h2>Experience this stunning VR game</h2>
                 <h4>Wits, deception, murder?</p>
-            </div>
-        </div>
-
-        <!-- Featured Products -->
-        <h1 class="desc">Featured Products</h1>
-        <div class="flex-card flex-gallery">
-            <div class="gallery">
-                <a href="productpage.html">
-                    <img src="img/featured_products/spaceship.jpg" width="500" height="310">
-                </a>
-                <ul class="desc">
-                    <li>Mach III gunship by Netflix </li>
-                    <li>dual booster</li>
-                    <li>tertiary battteris</li>
-                    <li>$20,000,000</li>
-                    <li>&#9733; &#9733; &#9733; &#9733; &#9734;</li>
-                </ul>
-            </div>
-            <div class="gallery">
-                <a href="productpage.html">
-                    <img src="img/featured_products/toilet.jpg" width="500" height="310">
-                </a>
-                <ul class="desc">
-                    <li>Space toilet</li>
-                    <li>Heated seat</li>
-                    <li>SOLD OUT</li>
-                    <li>$20,000</li>
-                    <li>&#9733; &#9733; &#9733; &#9733; &#9734;</li>
-                </ul>
-            </div>
-            <div class="gallery">
-                <a href="productpage.html">
-                    <img src="img/featured_products/mecha.jpg" width="500" height="310">
-                </a>
-                <ul class="desc">
-                    <li>jupiter II mech by christies</li>
-                    <li>patented armour</li>
-                    <li>avaliable</li>
-                    <li>$200,000</li>
-                    <li>&#9733; &#9733; &#9733; &#9733; &#9734;</li>
-                </ul>
-            </div>
-            <div class="gallery">
-                <a href="productpage.html">
-                    <img src="img/featured_products/astro.jpg" width="500" height="310">
-                </a>
-                <ul class="desc">
-                    <li>50 sq/ft marble counter tops</li>
-                    <li>Solid wood finishing</li>
-                    <li>avaliable</li>
-                    <li>$20,000</li>
-                    <li>&#9733; &#9733; &#9733; &#9733; &#9734;</li>
-                </ul>
-            </div>
-            <div class="gallery">
-                <a href="productpage.html">
-                    <img src="img/featured_products/spacegun.jpg" width="500" height="310">
-                </a>
-                <ul class="desc">
-                    <li>50 sq/ft marble counter tops</li>
-                    <li>Solid wood finishing</li>
-                    <li>avaliable</li>
-                    <li>$20,000</li>
-                    <li>&#9733; &#9733; &#9733; &#9733; &#9734;</li>
-                </ul>
-            </div>
-            <div class="gallery">
-                <a href="productpage.html">
-                    <img src="img/featured_products/gundam.png" width="500" height="310">
-                </a>
-                <ul class="desc">
-                    <li>50 sq/ft marble counter tops</li>
-                    <li>Solid wood finishing</li>
-                    <li>avaliable</li>
-                    <li>$20,000</li>
-                    <li>&#9733; &#9733; &#9733; &#9733; &#9734;</li>
-                </ul>
             </div>
         </div>
     </main>
