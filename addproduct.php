@@ -1,5 +1,8 @@
 <?php
-
+include 'db_connection.php';
+$prodconn = OpenCon();
+echo "Connected Successfully";
+CloseCon($prodconn);
 ?>
 
 <html lang="en">
