@@ -2,10 +2,10 @@
 
 function OpenCon()
 {
-  $dbhost = "localhost";
+  $dbhost = "localhost:3306";
   $dbuser = "root";
   $dbpass = "";
-  $db = "products";
+  $db = "web-project";
 
   $prodconn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $prodconn -> error);
 
