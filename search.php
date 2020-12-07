@@ -45,7 +45,7 @@
             <div class="right">
                 <div>
                     <li class="product-search">
-                        <form action="/search.html" method="get" id="form1"><input type="text" placeholder="Search.." name="query" id="search_field">
+                        <form action="/search.php" method="get" id="form1"><input type="text" placeholder="Search.." name="query" id="search_field">
                             <button type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
@@ -89,7 +89,7 @@
                 </div>
                 <a href="#">Space Insurance</a>
                 <h4>Filters & Sort</h4>
-                <form action="/search.html" class="filtersort">
+                <form action="/search.php" class="filtersort">
                     <div>
                         <label>Price: </label> $<input type="text" name="lowPrice" id="lowPrice" min="0" placeholder="min"> to $<input type="text" name="highPrice" id="highPrice" min="0" placeholder="max"><br><br>
                         <label>Rating: </label> <input type="number" name="lowStar" id="lowStar" min="0" max="5">&starf; to <input type="number" name="highStar" id="highStar" min="0" max="5">&starf;<br><br>
@@ -118,7 +118,7 @@
                 <ul id="products">
                     <?php
                         include 'searchresults.php';
-
+                        search();
                     ?>
                 </ul>
             </div>
