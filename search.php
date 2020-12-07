@@ -116,29 +116,10 @@
                 <!-- List of Products
         TODO: JQuery dynamically showing products based on search query. -->
                 <ul id="products">
+                    <?php
+                        include 'searchresults.php';
 
-                    <div class="image-card">
-                        <li class="product-card">
-                            <img src="img/product-placeholder.png" alt="Placeholder">
-
-                    </div>
-                    <h1>Placeholder 1</h1>
-                    <p>$1234.56</p>
-                    <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum odio nec accumsan tristique. Nulla tristique ultrices mauris, eu volutpat nulla luctus a. Cras sit amet consequat lorem, nec porttitor eros. Vestibulum ante ipsum
-                        primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
-                    <button>Add to cart</button>
-                    </li>
-                    <li class="product-card">
-                        <div class="image-card">
-                            <img src="img/product-placeholder.png" alt="Placeholder">
-                        </div>
-                        <h1>Placeholder 2</h1>
-                        <p>$1234.56</p>
-                        <p>5.0 &starf;&starf;&starf;&starf;&starf;</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <button>Add to cart</button>
-                    </li>
+                    ?>
                 </ul>
             </div>
         </div>
@@ -160,9 +141,6 @@
         </div>
 
     </main>
-
-    <script src="js/products.js"></script>
-    <script src="js/search.js"></script>
 </body>
 
 <!-- Footer -->
