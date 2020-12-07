@@ -64,14 +64,57 @@
         </nav>
 
         <!-- Text (or jumbotron) -->
-        <h1 class="desc">About Us</h1>
+        <h1 class="desc">Upload a new Product!</h1>
         <div class="text">
             <p class="desc">
-                BlackStar Alliance is Earth's leading space frontier company. Featuring a conglomerate of the brightest minds from around the world, BlackStar's primary mission continues to be bringing humanity to space, and bringing space back to humanity by making
-                it more accessible. We deal with alien civilizations all around the universe to supply the best technologies, food, insurance policies, and more. Come to BlackStar for all your space related needs!
+                This page is for our honoured sellers and manufacturers. Have a new product that you would like to sell through BlackStar Alliance's intergalactic network? Upload all the details here for review, and we'll get in touch as soon as we've reviewed all the details to talk business.
             </p>
         </div>
+        <div class="product-placement">
+            <!--1st flexbox containing pictures that customer can scroll through and click to enlarge on the main block.-->
 
+            <!--Main product image view pane-->
+            <div class="product-image-container">
+                <!--coontainer with the actual image file to allow resizing independently of flexbox-->
+
+                <!--Container for product name/title-->
+
+                <div class="side-flex">
+
+                    <div class="imgcont">
+                        <img class="product-image" src="/img/element1.png" alt="Formula 1 Mech">
+                    </div>
+                    <!--Flexbox for description UNDER flexbox with main image, organized in a column-->
+                    <div class="infocenter">
+                        <div class="titleflex">
+                            <h2 class="product-title" id="title1">Title placeholder</h2>
+                        </div>
+                        <div class="desc-flex">
+                            <div class="descborder">
+                                <p class="product-description">placeholder for description</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--item info flexbox containing price, quantity, add to cart button and rating toggle-->
+            <div class="iteminfo">
+                <!--Price-->
+                <div class="priceinfo">
+                    <h2>$</h2>
+                    <h2 id="priceDisplay">placeholder</h2>
+                </div>
+                <!--Number input to select quantity-->
+
+                <!--add to cart button-->
+                <div class="add-to-cart">
+                    <button type="button" name="button" onclick=spook()>Add to Cart</button>
+                </div>
+
+            </div>
+        </div>
         <!-- Featured cards -->
         <div class="flex-card">
             <div class="flextext">
