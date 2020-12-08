@@ -116,7 +116,7 @@ echo "Connected Successfully";
                 </div>
                 </div>
                 </div>
-      END;
+END;
       $stmt->close();
       CloseCon($prodconn);
       ?>
