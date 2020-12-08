@@ -27,7 +27,7 @@ function search() {
 
     $conn = openCon();
     $query = "%{$query}%";
-    $stmt = $conn->prepare("SELECT * FROM products WHERE `Product title` LIKE ?");
+    $stmt = $conn->prepare("SELECT * FROM products WHERE `ProductTitle` LIKE ?");
     $stmt->bind_param("s", $query);
     $stmt->execute();
     $stmt->bind_result($id, $title, $price, $desc, $imgsrc, $rate);
