@@ -1,29 +1,44 @@
 <?php
 
-
 include 'prodconnection.php';
 $prodconn = OpenCon();
 
-
-
 if(isset($_POST['submit']))
 {  
+
     
+   
+    //echo 1;
 
    
     $productid = $_POST['ProductID'];
     $title = $_POST['ProductTitle'];
     $price = $_POST['ProductPrice'];
     $productdescription = $_POST['productdescription'];
-    $img = $_FILES['imgsrc']['tmp_name'];
+    $target_file_path = 'img/' . $_FILES['imgsrc']['name'];
+    //$img = $target_file_path;//$_FILES['imgsrc']['tmp_name'];
     $rate = $_POST['rate'];
 
-    print_r($_POST);
-    print_r($_FILES);
+
+
+    $tmp_file = $_FILES['imgsrc']['tmp_name'];
+
+    move_uploaded_file($tmp_file, $target_file_path);
 
 
 $sql = "INSERT INTO `products` ( `ProductID`, `ProductTitle` , `ProductPrice` , `productdescription` , `imgsrc` , `rate`)
-VALUES (' $productid','$title','$price','$productdescription','$img','$rate')";
+VALUES (' $productid','$title','$price','$productdescription','$target_file_path','$rate')";
+
+// VALUES ('?','?','?','?','?','?')";
+// 
+
+// need to do the binding 
+
+// BIND BAR TO PREPEND STMT AS PARAMS 
+//if($stmt = mysqli_prepare($prodconn, $sql)) {
+  //      mysqli_stmt_bind_param($stmt, "ssissi", $productid, $title, $price, $productdescription, $target_file_path, $rate);
+    //    mysqli_stmt_execute($stmt);
+//}
 $query_run = mysqli_query($prodconn, $sql);
 if ($query_run) {
     echo '<script type="text/javascript"> alert("Image Profile Uploaded " ) </script>';
