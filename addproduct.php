@@ -133,7 +133,7 @@ CloseCon($prodconn);
             </span>
             <span>
               <label for="ProductPrice">Price:</label><br>
-              <input type="number" id="ProductPrice" name="ProductPrice" required><br>
+              <input type="number" id="ProductPrice" name="ProductPrice" step="0.01" required><br>
             </span>
             <span>
               <label for="productdescription">Product description:</label><br>
