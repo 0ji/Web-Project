@@ -69,31 +69,31 @@ CloseCon($prodconn);
         <!-- Product Category Navigation  -->
         <div class="flex-card">
             <div class="gallery">
-                <a target="_self" href="search.php?category=SpaceShips">
+                <a target="_self" href="search.php?category=SpaceShips&query=">
                     <img src="img/CATEGORY/SPACE_VEHICLES.png" alt="ship">
                     <div class="desc">SpaceShips</div>
                 </a>
             </div>
             <div class="gallery">
-                <a target="_self" href="search.php?category=SpaceParts">
+                <a target="_self" href="search.php?category=SpaceParts&query=">
                     <img src="img/CATEGORY/PART.png" alt="ship">
                     <div class="desc">SpaceParts</div>
                 </a>
             </div>
             <div class="gallery">
-                <a target="_self" href="search.php?category=SpaceGear">
+                <a target="_self" href="search.php?category=SpaceGear&query=">
                     <img src="img/CATEGORY/OUTERWEAR.png" alt="ship">
                     <div class="desc">SpaceGear</div>
                 </a>
             </div>
             <div class="gallery">
-                <a target="_self" href="search.php?category=SpaceTools">
+                <a target="_self" href="search.php?category=SpaceTools&query=">
                     <img src="img/CATEGORY/WEAPONS.png" alt="ship">
                     <div class="desc">SpaceTools</div>
                 </a>
             </div>
             <div class="gallery">
-                <a target="_self" href="search.php?category=SpaceIns">
+                <a target="_self" href="search.php?category=SpaceIns&query=">
                     <img src="img/CATEGORY/INSURANCE.png" alt="ship">
                     <div class="desc">Space Insurance</div>
                 </a>
