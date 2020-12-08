@@ -1,5 +1,4 @@
 <?php
-
 function OpenCon()
 {
   $dbhost = "localhost:3306";
@@ -16,5 +15,4 @@ function CloseCon($prodconn)
 {
   $prodconn -> close();
 }
-
 ?>

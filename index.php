@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+include 'prodconnection.php';
+$prodconn = OpenCon();
+echo "Connected Successfully";
+CloseCon($prodconn);
+?>
+
 <html lang="en">
 
 <head>
@@ -37,7 +43,7 @@
         <nav>
             <!-- Left Side -->
             <div>
-                <button class="logo" onclick="location.href='./index.html'">BlackStar Alliance</button>
+                <button class="logo" onclick="location.href='./index.php'">BlackStar Alliance</button>
                 <button class="item" href="#">About</button>
                 <button class="item" href="#">Blog</button>
             </div>
@@ -124,7 +130,7 @@
         <h1 class="desc">Featured Products</h1>
         <div class="flex-card flex-gallery">
             <div class="gallery">
-                <a href="productpage.html">
+                <a href="productpage.php">
                     <img src="img/featured_products/spaceship.jpg" width="500" height="310">
                 </a>
                 <ul class="desc">
@@ -136,7 +142,7 @@
                 </ul>
             </div>
             <div class="gallery">
-                <a href="productpage.html">
+                <a href="productpage.php">
                     <img src="img/featured_products/toilet.jpg" width="500" height="310">
                 </a>
                 <ul class="desc">
@@ -148,7 +154,7 @@
                 </ul>
             </div>
             <div class="gallery">
-                <a href="productpage.html">
+                <a href="productpage.php">
                     <img src="img/featured_products/mecha.jpg" width="500" height="310">
                 </a>
                 <ul class="desc">
@@ -160,7 +166,7 @@
                 </ul>
             </div>
             <div class="gallery">
-                <a href="productpage.html">
+                <a href="productpage.php">
                     <img src="img/featured_products/astro.jpg" width="500" height="310">
                 </a>
                 <ul class="desc">
@@ -172,7 +178,7 @@
                 </ul>
             </div>
             <div class="gallery">
-                <a href="productpage.html">
+                <a href="productpage.php">
                     <img src="img/featured_products/spacegun.jpg" width="500" height="310">
                 </a>
                 <ul class="desc">
@@ -184,7 +190,7 @@
                 </ul>
             </div>
             <div class="gallery">
-                <a href="productpage.html">
+                <a href="productpage.php">
                     <img src="img/featured_products/gundam.png" width="500" height="310">
                 </a>
                 <ul class="desc">

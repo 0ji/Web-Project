@@ -1,5 +1,16 @@
 <?php
+include 'prodconnection.php';
+$prodconn = OpenCon();
+echo "Connected Successfully";
 
+$stmt = $prodconn->prepare('SELECT * FROM `products` WHERE `Product ID` = 5');
+$stmt->execute();
+$stmt->bind_result($id, $title, $price, $desc, $imgsrc, $rating);
+echo "$id - $desc";
+$stmt->close();
+
+
+CloseCon($prodconn);
 ?>
 
 <html lang="en">
@@ -39,7 +50,7 @@
     <nav>
       <!-- Left Side -->
       <div>
-        <button class="logo" onclick="location.href='./index.html'">BlackStar Alliance</button>
+        <button class="logo" onclick="location.href='./index.php'">BlackStar Alliance</button>
         <button class="item" href="#">About</button>
         <button class="item" href="#">Blog</button>
       </div>

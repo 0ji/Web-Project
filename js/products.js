@@ -11,7 +11,7 @@ var products = [{
   id: 1,
   title: "Ship",
   price: 900,
-  description: "shp for space",
+  description: "ship for space",
   imgsrc: "img/products/spaceship.png",
   rate: 4
 },
@@ -81,7 +81,7 @@ var products = [{
 },
 {
   id: 10,
-  title: "solar panels ",
+  title: "solar panels",
   price: 100,
   description: "solar panels can recharge nuclear batteries with solar winds ",
   imgsrc: "img/products/solarpanel.png",
