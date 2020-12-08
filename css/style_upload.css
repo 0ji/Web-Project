@@ -45,6 +45,7 @@ nav {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    height: 55px;
     line-height: 0;
 }
 
@@ -135,10 +136,6 @@ div.text {
     border-radius: 30px;
 }
 
-input {
-  color: black;
-}
-
 .side-flex {
     display: flex;
     width:50%;
@@ -153,7 +150,6 @@ input {
   height: 90%;
 }
 
-
 .product-image {
     display: flex;
     border: 4mm ridge #3c5676;
@@ -163,94 +159,25 @@ input {
 
 .formcont {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-}
-
-.titleflex {
-    text-align: center;
-    color: #B0C4DE;
-    font-family: 'Bitter', fantasy;
-    font-size: 30px;
-    font-weight: bolder;
-    text-shadow: 5px 5px 10px #6D91C2;
-}
-
-.desc-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20rem;
-}
-
-.descborder {
-    display: flex;
-    padding: 20px;
-    background-color: rgba(57, 131, 192, 0.2);
-    border: 4mm ridge #3c5676;
-    border-radius: 50px;
-}
-
-.product-description {
-    margin: none;
-}
-
-.iteminfo {
-    margin-top: 50px;
-    float: right;
-    width: 25%;
-    border: 5px, black;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background-color: #104e9e00;
-}
-
-.priceinfo {
-    height: 25%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.quanityselector {
-    font-size: 20px;
-    height: 25%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.quaninput {
-    background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    max-width: 100px;
+    width: 50%;
 }
 
-.add-to-cart {
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+span > input[type="text"],span > input[type="number"], span > input[type="submit"]  {
+  color: black;
 }
 
-.add-to-cart button {
-    height: 30px;
-    width: 125px;
-    border-radius: 50px;
-    background-color: #2e96a3ff;
+input file {
+  display: none;
+  opacity:0;
 }
 
-.add-to-cart button:hover {
-    background-color: rgb(48, 180, 197);
-    border-color: black;
-    border-width: 5px;
+span > label, span > input {
+margin-bottom: 15px;
 }
-
 
 /* flex card */
 

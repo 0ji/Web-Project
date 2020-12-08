@@ -119,38 +119,37 @@ CloseCon($prodconn);
       <div class="side-flex">
 
         <div class="product-image-container">
-          <img class="product-image" src="/img/element1.png" alt="Formula 1 Mech">
+          <img class="product-image" src="/img/product_image.jpg" alt="Formula 1 Mech">
         </div>
         <!--Flexbox for description UNDER flexbox with main image, organized in a column-->
 
       </div>
       <!--Main product image view pane-->
       <div class="formcont">
-        <!--coontainer with the actual image file to allow resizing independently of flexbox-->
-
-        <!--Container for product name/title-->
-
-        <div class="aform">
           <form action="addproduct.php" method='post' class='myform' enctype="multipart/form-data">
-            <label for="ProductTitle">Title:</label>
-            <input type="text" id="ProductTitle" name="ProductTitle" placeholder="Enter Product Title" required><br><br>
-
-            <label for="ProductPrice">Price:</label>
-            <input type="number" id="ProductPrice" name="ProductPrice" required><br><br>
-
-            <label for="productdescription">Product description:</label>
-            <input type="text" id="productdescription" name="productdescription" placeholder="Enter Product Desc" required><br><br>
-
-            <label for="imgsrc">Img Src:</label>
-            <input type="file" id="imgsrc" name="imgsrc" required><br><br>
-
-            <label for="rate">Rate:</label>
-            <input type="number" id="rate" name="rate" min='0' max='5' placeholder="Enter rating" required><br><br>
-            <input type="submit" value="upload data/image" name="submit">
+            <span>
+              <label for="ProductTitle">Title:</label><br>
+              <input type="text" id="ProductTitle" name="ProductTitle" placeholder="Enter Product Title" required><br>
+            </span>
+            <span>
+              <label for="ProductPrice">Price:</label><br>
+              <input type="number" id="ProductPrice" name="ProductPrice" required><br>
+            </span>
+            <span>
+              <label for="productdescription">Product description:</label><br>
+              <input type="text" id="productdescription" name="productdescription" placeholder="Enter Product Desc" required><br>
+            </span>
+            <span>
+              <label for="imgsrc">Upload Image:</label><br>
+              <input type="file" id="imgsrc" name="imgsrc" title="Select file to upload" required><br>
+            </span>
+            <span>
+              <label for="rate">Rate:</label><br>
+              <input type="number" id="rate" name="rate" min='0' max='5' placeholder="Enter rating" required><br>
+            </span>
+            <span>            <input type="submit" value="upload data/image" name="submit">
+            </span>
           </form>
-
-        </div>
-
       </div>
       <!--item info flexbox containing price, quantity, add to cart button and rating toggle-->
 
