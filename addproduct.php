@@ -1,8 +1,42 @@
 <?php
+
+
 include 'prodconnection.php';
 $prodconn = OpenCon();
-echo "Connected Successfully";
+
+
+
+if(isset($_POST['submit']))
+{  
+    echo "Connected Successfully";
+
+    $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]);
+    $productid = $_POST['ProductID'];
+    $title = $_POST['ProductTitle'];
+    $price = $_POST['ProductPrice'];
+    $productdescription = $_POST['productdescription'];
+    $imgsrc = $_POST['imgsrc'];
+    $rate = $_POST['rate'];
+
+
+echo "It is working !!!! ";
+
+$sql = "INSERT INTO `products` ( `ProductID`, `ProductTitle` , `ProductPrice` , `productdescription` , `imgsrc` , `rate`)
+VALUES (' $productid','$title','$price','$productdescription','$file','$rate')";
+$query_run = mysqli_query($connection, $sql);
+if ($query_run) {
+    echo '<script type="text/javascript"> alert("Image Profile Uploaded " ) </script>';
+
+} else {
+    echo '<script type="text/javascript"> alert("Not Uploaded" ) </script>';
+
+}
+mysqli_close($connection);
+}
+
 CloseCon($prodconn);
+
+
 ?>
 
 <html lang="en">
@@ -43,7 +77,7 @@ CloseCon($prodconn);
         <nav>
             <!-- Left Side -->
             <div>
-                <button class="logo" onclick="location.href='./index.html'">BlackStar Alliance</button>
+                <button class="logo" onclick="location.href='./index.php'">BlackStar Alliance</button>
                 <button class="item" href="#">About</button>
                 <button class="item" href="#">Blog</button>
             </div>
@@ -53,7 +87,7 @@ CloseCon($prodconn);
             <div class="right">
                 <div>
                     <li class="product-search">
-                        <form action="/search.html" method="get" id="form1"><input type="text" placeholder="Search.." name="query" id="search_field">
+                        <form action="/search.php" method="get" id="form1"><input type="text" placeholder="Search.." name="query" id="search_field">
                             <button type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
@@ -75,11 +109,32 @@ CloseCon($prodconn);
         </div>
         <div class="product-placement">
             <!--1st flexbox containing pictures that customer can scroll through and click to enlarge on the main block.-->
+            <form action="/addproduct.php" method='post' class='myform' enctype="multipart/form-data">
+                    <label for="ProductID">ID::</label>
+                    <input type="text" id="ProductID" name="ProductID" placeholder="Enter Product ID"><br><br>
 
+                    <label for="ProductTitle">Title:</label>
+                    <input type="text" id="ProductTitle" name="ProductTitle" placeholder="Enter Product Title"><br><br>
+
+                    <label for="ProductPrice">Price:</label>
+                    <input type="number" id="ProductPrice" name="ProductPrice"><br><br>
+
+                    <label for="productdescription">Product description:</label>
+                    <input type="text" id="productdescription" name="productdescription" placeholder="Enter Product Desc"><br><br>
+                   
+                    <label for="imgsrc">Img Src:</label>
+                    <input type="file" id="imgsrc" name="fileToUpload"><br><br>
+                    <label for="rate">Rate:</label>
+                    <input type="number" id="rate" name="rate" min='0' max='5' placeholder="Enter rating"><br><br>
+                    <input type="submit" value="upload data/image" name="submit">
+                </form>
+
+                
+              
             <!--Main product image view pane-->
             <div class="product-image-container">
                 <!--coontainer with the actual image file to allow resizing independently of flexbox-->
-
+      
                 <!--Container for product name/title-->
 
                 <div class="side-flex">
@@ -91,10 +146,12 @@ CloseCon($prodconn);
                     <div class="infocenter">
                         <div class="titleflex">
                             <h2 class="product-title" id="title1">Title placeholder</h2>
+                          
+
                         </div>
                         <div class="desc-flex">
                             <div class="descborder">
-                                <p class="product-description">placeholder for description</p>
+                            
                             </div>
                         </div>
                     </div>
