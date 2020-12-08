@@ -3,7 +3,7 @@ include 'prodconnection.php';
 $prodconn = OpenCon();
 echo "Connected Successfully";
 
-$stmt = $prodconn->prepare('SELECT * FROM `products` WHERE `Product ID` = 5');
+$stmt = $prodconn->prepare('SELECT * FROM `products` WHERE `ProductID` = 5');
 $stmt->execute();
 $stmt->bind_result($id, $title, $price, $desc, $imgsrc, $rating);
 echo "$id - $desc";
