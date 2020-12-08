@@ -1,7 +1,6 @@
 <?php
 include 'prodconnection.php';
 $prodconn = OpenCon();
-echo "Connected Successfully";
 CloseCon($prodconn);
 ?>
 
