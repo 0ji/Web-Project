@@ -97,12 +97,12 @@
                     <div>
                         <label>Sort:</label>
                         <select name="sort" class="sort">
-              <option selected value="nosort"></option>
-              <option value="priceL2H">($) Low to High</option>
-              <option value="priceH2L">($) High to Low</option>
-              <option value="starL2H">(&star;) Low to High</option>
-              <option value="starH2L">(&starf;) High to Low</option>
-            </select>
+                            <option selected value="nosort"></option>
+                            <option value="priceL2H">($) Low to High</option>
+                            <option value="priceH2L">($) High to Low</option>
+                            <option value="starL2H">(&star;) Low to High</option>
+                            <option value="starH2L">(&starf;) High to Low</option>
+                        </select>
                     </div>
                     <!-- hidden search input to pass on previous query -->
                     <input type="hidden" id="hiddenSearch" name="query">
@@ -113,12 +113,10 @@
             <!-- container for all things product-search related. -->
             <div class="product-container">
                 <h2 id='search_header'>Search Results Page</h2>
-                <!-- List of Products
-        TODO: JQuery dynamically showing products based on search query. -->
                 <ul id="products">
                     <?php
-                        include 'searchresults.php';
-                        search();
+                    include 'searchresults.php';
+                    search();
                     ?>
                 </ul>
             </div>
@@ -143,6 +141,14 @@
     </main>
 </body>
 
+<script>
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var query = urlParams.get('query');
+
+    document.getElementById("search_field").value = query;
+</script>
+
 <!-- Footer -->
 <footer class="footer">
 
@@ -164,33 +170,32 @@
     <div class="footer_center">
         <div class="address">
             <p><span>1005 Market St, San Francisco, California, United States, North America, Earth, Solar System,
-            Spiral Arm, Milky Way, Laniakea Supercluster</p>
-          </div>
-          <div class="number">
-            <p>403-222-0911</p>
-          </div>
-          <div class="support">
-            <a href="info@BlackStarAlliance">
-              <p>info@BlackStarAlliance</p>
-            </a>
-          </div>
+                    Spiral Arm, Milky Way, Laniakea Supercluster</p>
         </div>
+        <div class="number">
+            <p>403-222-0911</p>
+        </div>
+        <div class="support">
+            <a href="info@BlackStarAlliance">
+                <p>info@BlackStarAlliance</p>
+            </a>
+        </div>
+    </div>
 
-        <!-- Right -->
-        <div class="footer_right">
-          <div class="footerAbout">
+    <!-- Right -->
+    <div class="footer_right">
+        <div class="footerAbout">
             <h3>About BlackStar Alliance</h3>
             <p>As the premiere Faster Than Light Travel&trade; company in the universe, we take great pride in bringing you into space, and beyond.</p>
-            </div>
-            <div class="footersocial">
-              <a href="www.facebook.com" class="facebook">Facebook</a>
-              <a href="www.instagram.com" class="instagram">instagram</a>
-              <a href="www.Youtube.com" class="Youtube">Youtube</a>
-              <a href="www.linkedin.com" class="linkedin">linkedin</a>
-              <a href="www.twitter.com" class="twitter">twitter</a>
-            </div>
-          </div>
-        </footer>
+        </div>
+        <div class="footersocial">
+            <a href="www.facebook.com" class="facebook">Facebook</a>
+            <a href="www.instagram.com" class="instagram">instagram</a>
+            <a href="www.Youtube.com" class="Youtube">Youtube</a>
+            <a href="www.linkedin.com" class="linkedin">linkedin</a>
+            <a href="www.twitter.com" class="twitter">twitter</a>
+        </div>
+    </div>
+</footer>
 
-
-        </html>
+</html>
