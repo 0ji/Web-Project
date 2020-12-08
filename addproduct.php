@@ -8,22 +8,23 @@ $prodconn = OpenCon();
 
 if(isset($_POST['submit']))
 {  
-    echo "Connected Successfully";
+    
 
-    $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]);
+   
     $productid = $_POST['ProductID'];
     $title = $_POST['ProductTitle'];
     $price = $_POST['ProductPrice'];
     $productdescription = $_POST['productdescription'];
-    $imgsrc = $_POST['imgsrc'];
+    $img = $_FILES['imgsrc']['tmp_name'];
     $rate = $_POST['rate'];
 
+    print_r($_POST);
+    print_r($_FILES);
 
-echo "It is working !!!! ";
 
 $sql = "INSERT INTO `products` ( `ProductID`, `ProductTitle` , `ProductPrice` , `productdescription` , `imgsrc` , `rate`)
-VALUES (' $productid','$title','$price','$productdescription','$file','$rate')";
-$query_run = mysqli_query($connection, $sql);
+VALUES (' $productid','$title','$price','$productdescription','$img','$rate')";
+$query_run = mysqli_query($prodconn, $sql);
 if ($query_run) {
     echo '<script type="text/javascript"> alert("Image Profile Uploaded " ) </script>';
 
@@ -31,10 +32,10 @@ if ($query_run) {
     echo '<script type="text/javascript"> alert("Not Uploaded" ) </script>';
 
 }
-mysqli_close($connection);
+mysqli_close($prodconn);
 }
 
-CloseCon($prodconn);
+
 
 
 ?>
@@ -109,7 +110,7 @@ CloseCon($prodconn);
         </div>
         <div class="product-placement">
             <!--1st flexbox containing pictures that customer can scroll through and click to enlarge on the main block.-->
-            <form action="/addproduct.php" method='post' class='myform' enctype="multipart/form-data">
+            <form action="addproduct.php" method='post' class='myform' enctype="multipart/form-data">
                     <label for="ProductID">ID::</label>
                     <input type="text" id="ProductID" name="ProductID" placeholder="Enter Product ID"><br><br>
 
@@ -123,7 +124,8 @@ CloseCon($prodconn);
                     <input type="text" id="productdescription" name="productdescription" placeholder="Enter Product Desc"><br><br>
                    
                     <label for="imgsrc">Img Src:</label>
-                    <input type="file" id="imgsrc" name="fileToUpload"><br><br>
+                    <input type="file" id="imgsrc" name="imgsrc"><br><br>
+                    
                     <label for="rate">Rate:</label>
                     <input type="number" id="rate" name="rate" min='0' max='5' placeholder="Enter rating"><br><br>
                     <input type="submit" value="upload data/image" name="submit">
