@@ -37,7 +37,7 @@
         <nav>
             <!-- Left Side -->
             <div>
-                <button class="logo" onclick="location.href='./index.html'">BlackStar Alliance</button>
+                <button class="logo" onclick="location.href='./index.php'">BlackStar Alliance</button>
                 <button class="item" href="#">About</button>
                 <button class="item" href="#">Blog</button>
             </div>
