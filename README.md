@@ -1,5 +1,6 @@
 # Web Project
- Web Project for CST8285
+Web Project for CST8285
+
 Contributors: Koji Dino, Usaamah Gill, and Akshay Gokani Section 303
 
 Javascript version of the project with working sort features: 
